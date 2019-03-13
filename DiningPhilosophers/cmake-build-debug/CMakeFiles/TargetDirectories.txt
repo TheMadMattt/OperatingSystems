@@ -1,0 +1,3 @@
+/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/DiningPhilosophers.dir
+/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/edit_cache.dir

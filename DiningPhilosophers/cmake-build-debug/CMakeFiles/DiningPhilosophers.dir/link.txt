@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -g   CMakeFiles/DiningPhilosophers.dir/main.cpp.o CMakeFiles/DiningPhilosophers.dir/Philosopher.cpp.o CMakeFiles/DiningPhilosophers.dir/Fork.cpp.o  -o DiningPhilosophers -pthread 
