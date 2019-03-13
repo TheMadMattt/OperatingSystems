@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b0b9b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b0b9b.dir/build.make CMakeFiles/cmTC_b0b9b.dir/build
-make[1]: Wejście do katalogu '/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b0b9b.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b0b9b.dir/CheckSymbolExists.c.o   -c /home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b0b9b
-/home/mateusz/Programs/JetBrains/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0b9b.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_b0b9b.dir/CheckSymbolExists.c.o  -o cmTC_b0b9b 
-CMakeFiles/cmTC_b0b9b.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_f32a6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f32a6.dir/build.make CMakeFiles/cmTC_f32a6.dir/build
+make[1]: Wejście do katalogu '/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f32a6.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f32a6.dir/CheckSymbolExists.c.o   -c /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f32a6
+/home/mateusz/Programs/JetBrains/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f32a6.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_f32a6.dir/CheckSymbolExists.c.o  -o cmTC_f32a6 
+CMakeFiles/cmTC_f32a6.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b0b9b.dir/build.make:86: recipe for target 'cmTC_b0b9b' failed
-make[1]: *** [cmTC_b0b9b] Error 1
-make[1]: Opuszczenie katalogu '/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_b0b9b/fast' failed
-make: *** [cmTC_b0b9b/fast] Error 2
+CMakeFiles/cmTC_f32a6.dir/build.make:86: recipe for target 'cmTC_f32a6' failed
+make[1]: *** [cmTC_f32a6] Error 1
+make[1]: Opuszczenie katalogu '/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_f32a6/fast' failed
+make: *** [cmTC_f32a6/fast] Error 2
 
-File /home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -32,4 +32,24 @@ int main(int argc, char** argv)
   return 0;
 #endif
 }
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3540f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3540f.dir/build.make CMakeFiles/cmTC_3540f.dir/build
+make[1]: Wejście do katalogu '/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3540f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3540f.dir/CheckFunctionExists.c.o   -c /home/mateusz/Programs/JetBrains/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3540f
+/home/mateusz/Programs/JetBrains/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3540f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3540f.dir/CheckFunctionExists.c.o  -o cmTC_3540f -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3540f.dir/build.make:86: recipe for target 'cmTC_3540f' failed
+make[1]: *** [cmTC_3540f] Error 1
+make[1]: Opuszczenie katalogu '/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_3540f/fast' failed
+make: *** [cmTC_3540f/fast] Error 2
+
 

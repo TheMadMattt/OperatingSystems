@@ -6,25 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Fork.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/Fork.h
 string
 -
 
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Philosopher.cpp
-iostream
--
-Philosopher.h
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Philosopher.h
-vector
--
-
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Philosopher.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/Philosopher.h
 vector
 -
 Fork.h
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Fork.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/Fork.h
 
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/main.cpp
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/main.cpp
 iostream
 -
 pthread.h
@@ -34,7 +26,7 @@ vector
 unistd.h
 -
 Philosopher.h
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Philosopher.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/Philosopher.h
 Fork.h
-/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Fork.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/Fork.h
 

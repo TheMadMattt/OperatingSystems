@@ -8,7 +8,6 @@
 
 using namespace std;
 
-vector<Fork> forks;
 vector<pthread_t> philosophers;
 pthread_mutex_t printing;
 
@@ -26,8 +25,6 @@ int main() {
 
     cout << "Ile filozofów chcesz utworzyć?: ";
     cin >> philoNumber;
-
-    forks.resize(static_cast<unsigned long>(philoNumber * 2));
 
     philosophers.resize(philoNumber);
 

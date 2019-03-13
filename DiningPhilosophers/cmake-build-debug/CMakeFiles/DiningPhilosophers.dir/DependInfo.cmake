@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Fork.cpp" "/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/DiningPhilosophers.dir/Fork.cpp.o"
-  "/home/mateusz/Dokumenty/Projects/DiningPhilosophers/Philosopher.cpp" "/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/DiningPhilosophers.dir/Philosopher.cpp.o"
-  "/home/mateusz/Dokumenty/Projects/DiningPhilosophers/main.cpp" "/home/mateusz/Dokumenty/Projects/DiningPhilosophers/cmake-build-debug/CMakeFiles/DiningPhilosophers.dir/main.cpp.o"
+  "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/Fork.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/DiningPhilosophers.dir/Fork.cpp.o"
+  "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/Philosopher.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/DiningPhilosophers.dir/Philosopher.cpp.o"
+  "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/main.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophers/cmake-build-debug/CMakeFiles/DiningPhilosophers.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
