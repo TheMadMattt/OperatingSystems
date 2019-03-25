@@ -1,6 +1,3 @@
-//
-// Created by mateusz on 21.03.19.
-//
 
 #ifndef DININGPHILOSOPHERSCHANDYMISRA_SYNCINGCHANNEL_H
 #define DININGPHILOSOPHERSCHANDYMISRA_SYNCINGCHANNEL_H
@@ -15,7 +12,6 @@ class SyncingChannel {
     std::condition_variable condition;
 
 public:
-
     void wait();
     void notifyAll();
 };

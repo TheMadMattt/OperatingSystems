@@ -1,22 +1,30 @@
-//
-// Created by mateusz on 21.03.19.
-//
 
 #include <unistd.h>
 #include <string>
 #include "Philosopher.h"
 
-Philosopher::Philosopher(int id, TableSetup& tableChannel, Fork & right, Fork & left)
+Philosopher::Philosopher(int id, TableSetup &tableSetup, Fork &right, Fork &left, Printing &print)
     :id(id),
-    table(tableChannel),
+    table(tableSetup),
     rightFork(right),
-    leftFork(left)
-{
-}
+    leftFork(left),
+    philThread(&Philosopher::startDinner, this),
+    print(print)
+{}
+
+Philosopher::Philosopher(Philosopher && other) noexcept
+        : id(other.id)
+        , table(other.table)
+        , leftFork(other.leftFork)
+        , rightFork(other.rightFork)
+        , philThread(std::move(other.philThread))
+        , print(other.print)
+{}
 
 Philosopher::~Philosopher() {
-
-    philThread.join();
+    if(philThread.joinable()){
+        philThread.detach();
+    }
 
 }
 
@@ -27,7 +35,7 @@ void Philosopher::startDinner() {
     do{
         think();
         eat();
-    }while(1);
+    }while(!table.done);
 
 }
 
@@ -35,8 +43,10 @@ void Philosopher::requestForks() {
     setStatus(PhilStatus::REQUESTING);
     rightFork.requestFork(id);
     setStatus(PhilStatus::TOOK_RIGH_FORK);
+    sleep(500);
     leftFork.requestFork(id);
     setStatus(PhilStatus::TOOK_LEFT_FORK);
+    sleep(500);
 }
 
 void Philosopher::putDownForks() {
@@ -58,7 +68,7 @@ void Philosopher::putDownForks() {
 
 void Philosopher::think() {
     setStatus(PhilStatus::THINKING);
-    usleep(static_cast<__useconds_t>(getRandom(2.5, 3.5)));
+    sleepRandom(2.5,3.5);
 }
 
 void Philosopher::eat() {
@@ -75,7 +85,7 @@ void Philosopher::eat() {
 
     setStatus(PhilStatus::EATING);
 
-    usleep(static_cast<__useconds_t>(getRandom(2.5, 3.5)));
+    sleepRandom(2.5,3.5);
 
     putDownForks();
 
@@ -115,10 +125,14 @@ std::string Philosopher::getStatus(){
 
 void Philosopher::setStatus(PhilStatus status) {
     Philosopher::status = status;
+
+    print.updateMenu(id,getStatus());
 }
 
-int Philosopher::getRandom(double min, double max) {
+void Philosopher::sleepRandom(double min, double max) {
 
-    return static_cast<int>(((max - min) * ((double) rand() / (double) RAND_MAX) + min) * 1000000);
+    int randSleepTime = static_cast<int>(((max - min) * ((double) rand() / (double) RAND_MAX) + min) * 1000000);
+
+    std::this_thread::sleep_for(std::chrono::microseconds(randSleepTime));
 
 }

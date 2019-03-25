@@ -23,8 +23,8 @@ private:
     SyncingChannel channel;
 
 public:
-    Fork();
     Fork(int id, int ownerId);
+    Fork(const Fork& other);
 
     void requestFork(int ownerId);
     void freeFork();

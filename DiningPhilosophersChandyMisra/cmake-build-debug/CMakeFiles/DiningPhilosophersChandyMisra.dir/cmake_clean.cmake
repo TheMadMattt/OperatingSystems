@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o"
   "CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o"
   "CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o"
+  "CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o"
   "DiningPhilosophersChandyMisra.pdb"
   "DiningPhilosophersChandyMisra"
 )

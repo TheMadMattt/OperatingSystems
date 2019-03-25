@@ -96,6 +96,12 @@
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.h">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.cpp">
+			<Option target="DiningPhilosophersChandyMisra"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.h">
+			<Option target="DiningPhilosophersChandyMisra"/>
+		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.cpp">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>

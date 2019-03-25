@@ -4,16 +4,19 @@
 
 #include "Fork.h"
 
-Fork::Fork() {
+
+Fork::Fork(int id, int ownerId)
+    :id(id),
+    ownerId(ownerId)
+{
     this->status = ForkStatus::DIRTY;
 }
 
-Fork::Fork(int id, int ownerId) {
-
-    this->id = id;
-    this->ownerId = ownerId;
-    this->status = ForkStatus::DIRTY;
-}
+Fork::Fork(const Fork &other)
+        : id(other.id)
+        , ownerId(other.ownerId)
+        , status(other.status)
+{}
 
 void Fork::requestFork(int ownerId) {
 

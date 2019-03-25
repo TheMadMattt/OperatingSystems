@@ -177,6 +177,33 @@ Philosopher.cpp.s:
 	$(MAKE) -f CMakeFiles/DiningPhilosophersChandyMisra.dir/build.make CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.s
 .PHONY : Philosopher.cpp.s
 
+Printing.o: Printing.cpp.o
+
+.PHONY : Printing.o
+
+# target to build an object file
+Printing.cpp.o:
+	$(MAKE) -f CMakeFiles/DiningPhilosophersChandyMisra.dir/build.make CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o
+.PHONY : Printing.cpp.o
+
+Printing.i: Printing.cpp.i
+
+.PHONY : Printing.i
+
+# target to preprocess a source file
+Printing.cpp.i:
+	$(MAKE) -f CMakeFiles/DiningPhilosophersChandyMisra.dir/build.make CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.i
+.PHONY : Printing.cpp.i
+
+Printing.s: Printing.cpp.s
+
+.PHONY : Printing.s
+
+# target to generate assembly for a file
+Printing.cpp.s:
+	$(MAKE) -f CMakeFiles/DiningPhilosophersChandyMisra.dir/build.make CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.s
+.PHONY : Printing.cpp.s
+
 SyncingChannel.o: SyncingChannel.cpp.o
 
 .PHONY : SyncingChannel.o
@@ -273,6 +300,9 @@ help:
 	@echo "... Philosopher.o"
 	@echo "... Philosopher.i"
 	@echo "... Philosopher.s"
+	@echo "... Printing.o"
+	@echo "... Printing.i"
+	@echo "... Printing.s"
 	@echo "... SyncingChannel.o"
 	@echo "... SyncingChannel.i"
 	@echo "... SyncingChannel.s"

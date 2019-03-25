@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o"
+  "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/main.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.o"

@@ -8,6 +8,7 @@
 
 #include <thread>
 #include "Fork.h"
+#include "Printing.h"
 
 enum PhilStatus{
     EATING, THINKING, REQUESTING, TOOK_RIGH_FORK, TOOK_LEFT_FORK, PUT_DOWN_LEFT_FORK, PUT_DOWN_RIGHT_FORK
@@ -16,19 +17,14 @@ enum PhilStatus{
 class Philosopher {
 
 private:
-    int id;
-    Fork& rightFork;
-    Fork& leftFork;
+    int id = -1;
+    TableSetup &table;
+    Fork &rightFork;
+    Fork &leftFork;
     std::thread philThread;
     PhilStatus status;
 
-    TableSetup& table;
-
-public:
-    Philosopher(int id, TableSetup& tableChannel, Fork & right, Fork & left);
-    ~Philosopher();
-
-    void startDinner();
+    Printing &print;
 
     void eat();
     void think();
@@ -36,11 +32,18 @@ public:
     void requestForks();
     void putDownForks();
 
+    void sleepRandom(double min, double max);
+
+public:
+    Philosopher(int id, TableSetup& tableSetup, Fork & right, Fork & left, Printing &print);
+    Philosopher(Philosopher&& other) noexcept ;
+    ~Philosopher();
+
+    void startDinner();
+
     std::string getStatus();
 
     void setStatus(PhilStatus status);
-
-    int getRandom(double min, double max);
 
 };
 
