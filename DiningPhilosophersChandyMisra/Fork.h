@@ -1,10 +1,9 @@
 //
-// Created by mateusz on 21.03.19.
+// Created by mateusz on 25.03.19.
 //
 
 #ifndef DININGPHILOSOPHERSCHANDYMISRA_FORK_H
 #define DININGPHILOSOPHERSCHANDYMISRA_FORK_H
-
 
 #include <mutex>
 #include "SyncingChannel.h"
@@ -13,26 +12,30 @@ enum ForkStatus{
     DIRTY, CLEAN
 };
 
+
 class Fork {
+
+public:
+
+    Fork(int id, int philosopherId);
+    Fork(const Fork& otherFork);
+
+    void requestFork(int philosopherId);
+    void putDownFork();
+
+    std::mutex& getForkMutex();
+
+    std::string getForkStatus();
+    void setForkStatus(ForkStatus newStatus);
+
 private:
     int id;
     int ownerId;
-    ForkStatus status;
+    ForkStatus status = ForkStatus::DIRTY;
+    bool isDirty;
 
-    std::mutex mutex;
+    std::mutex forkMutex;
     SyncingChannel channel;
-
-public:
-    Fork(int id, int ownerId);
-    Fork(const Fork& other);
-
-    void requestFork(int ownerId);
-    void freeFork();
-
-    std::mutex& getMutex();
-
-    std::string getStatus() const;
-    void setStatus(ForkStatus status);
 
 };
 

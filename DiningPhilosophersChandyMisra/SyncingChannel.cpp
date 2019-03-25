@@ -1,17 +1,20 @@
 //
-// Created by mateusz on 21.03.19.
+// Created by mateusz on 25.03.19.
 //
 
 #include "SyncingChannel.h"
 
 void SyncingChannel::wait() {
 
-    std::unique_lock<std::mutex> lock(mutex);
-    condition.wait(lock);
+    std::unique_lock<std::mutex> uniqueLock(mutexLock);
+
+    conditionVariable.wait(uniqueLock);
 }
 
-void SyncingChannel::notifyAll() {
+void SyncingChannel::notifyAllThreads() {
 
-    std::unique_lock<std::mutex> lock(mutex);
-    condition.notify_all();
+    std::unique_lock<std::mutex> uniqueLock(mutexLock);
+
+    conditionVariable.notify_all();
+
 }

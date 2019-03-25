@@ -1,40 +1,49 @@
 //
-// Created by mateusz on 21.03.19.
+// Created by mateusz on 25.03.19.
 //
 
 #include "Fork.h"
 
-
-Fork::Fork(int id, int ownerId)
-    :id(id),
-    ownerId(ownerId)
+Fork::Fork(int id, int philosopherId)
+    :   id(id),
+        ownerId(philosopherId),
+        isDirty(true)
 {
-    this->status = ForkStatus::DIRTY;
 }
 
-Fork::Fork(const Fork &other)
-        : id(other.id)
-        , ownerId(other.ownerId)
-        , status(other.status)
-{}
+Fork::Fork(const Fork &otherFork)
+    :   id(otherFork.id),
+        ownerId(otherFork.ownerId),
+        isDirty(otherFork.isDirty)
+{
+}
 
-void Fork::requestFork(int ownerId) {
+void Fork::requestFork(int philosopherId) {
 
-    while(this->ownerId != ownerId){
-        if(status == ForkStatus::DIRTY){
-            std::lock_guard<std::mutex> lock(mutex);
-
+    while (ownerId != philosopherId){
+        if(isDirty){
+            std::lock_guard<std::mutex> lockGuard(forkMutex);
             status = ForkStatus::CLEAN;
-
-            this->ownerId = ownerId;
+            isDirty = false;
+            ownerId = philosopherId;
         }else{
             channel.wait();
         }
     }
-
 }
 
-std::string Fork::getStatus() const {
+void Fork::putDownFork() {
+    isDirty = true;
+
+    channel.notifyAllThreads();
+}
+
+std::mutex &Fork::getForkMutex() {
+    return forkMutex;
+}
+
+std::string Fork::getForkStatus() {
+
     std::string message = "Fork" + std::to_string(id);
 
     switch(status){
@@ -49,18 +58,6 @@ std::string Fork::getStatus() const {
     return message + " -> Phil" + std::to_string(ownerId);
 }
 
-void Fork::setStatus(ForkStatus status) {
-    Fork::status = status;
-}
-
-std::mutex& Fork::getMutex() {
-    return mutex;
-}
-
-void Fork::freeFork() {
-
-    this->status = ForkStatus::DIRTY;
-
-    channel.notifyAll();
-
+void Fork::setForkStatus(ForkStatus newStatus) {
+    status = newStatus;
 }

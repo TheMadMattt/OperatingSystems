@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug"/>
+				<Option working_dir="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug"/>
+				<Option working_dir="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DiningPhilosophersChandyMisra">
-				<Option output="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/DiningPhilosophersChandyMisra" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug"/>
+				<Option output="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/DiningPhilosophersChandyMisra" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 DiningPhilosophersChandyMisra"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 DiningPhilosophersChandyMisra"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DiningPhilosophersChandyMisra/fast">
-				<Option output="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/DiningPhilosophersChandyMisra" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug"/>
+				<Option output="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/DiningPhilosophersChandyMisra" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,57 +67,57 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 DiningPhilosophersChandyMisra/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 DiningPhilosophersChandyMisra/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug"/>
+				<Option working_dir="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.cpp">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.cpp">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.h">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.cpp">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.cpp">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.h">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.h">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.cpp">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.cpp">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.h">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.h">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.cpp">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.cpp">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.h">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.h">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.cpp">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.cpp">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.h">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.h">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/main.cpp">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/main.cpp">
 			<Option target="DiningPhilosophersChandyMisra"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/CMakeLists.txt">
+		<Unit filename="/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -1,50 +1,31 @@
 #include <utility>
 
 #include <utility>
+
+//
+// Created by mateusz on 25.03.19.
+//
+
 #include "Printing.h"
 
-Printing::Printing(TableSetup &table, int philsNumber) : table(table), philsNumber(philsNumber)
-{}
-
+Printing::Printing(TableSetup &tableSetup)
+    :   tableSetup(tableSetup)
+{
+}
 
 Printing::~Printing() {
     refresh();
+    closeMenu();
 }
 
-void Printing::createMenu(std::vector<std::string> philosophersStates) {
-
-    init();
-
-    this->philosophersStates = std::move(philosophersStates);
-    this->myMenuItems = new ITEM*[philsNumber];
-
-    for (int i = 0; i < philsNumber; ++i) {
-        myMenuItems[i] = new_item(this->philosophersStates[i].c_str(), nullptr);
-    }
-
-    myMenu = new_menu(myMenuItems);
-
-    post_menu(myMenu);
-    mvprintw(LINES - 2, 4, "ESC to stop threads");
-    refresh();
-}
-
-void Printing::init() {
-
-    initscr();
-    cbreak();
-    noecho();
-    keypad(stdscr, TRUE);
-
-}
-
-void Printing::start() {
+void Printing::menu() {
 
     int c;
     bool finished = false;
 
     while((c = getch()) && !finished)
     {
+        std::lock_guard<std::mutex> lockGuard(menuMutex);
         switch(c)
         {	case KEY_DOWN:
                 menu_driver(myMenu, REQ_DOWN_ITEM);
@@ -59,31 +40,68 @@ void Printing::start() {
             default:
                 break;
         }
+        refresh();
+    }
+}
 
+void Printing::createMenu(std::vector<std::string> philosophersStatus) {
+
+    init();
+    int philosophersNumber = static_cast<int>(philosophersStatus.size());
+    this->philosopherStatus = std::move(philosophersStatus);
+    myMenuItems = new ITEM*[philosophersNumber];
+
+    for (int i = 0; i < philosophersNumber; ++i) {
+        myMenuItems[i] = new_item(this->philosopherStatus[i].c_str(), nullptr);
     }
 
+    myMenu = new_menu(myMenuItems);
+    set_menu_mark(myMenu, " ");
+    refresh();
+    post_menu(myMenu);
+
+    mvprintw(LINES - 2, 0, "ESC to stop threads");
+    refresh();
+}
+
+void Printing::init() {
+
+    initscr();
+    cbreak();
+    noecho();
+    keypad(stdscr, true);
 }
 
 void Printing::stop() {
 
-    table.done = true;
+    tableSetup.finishedDinner = true;
+
 }
 
-void Printing::updateMenu(int philId, std::string state) {
-
-    std::lock_guard<std::mutex> lock_guard(menuLock);
-
-    philosophersStates[philId] = std::move(state);
-
-    myMenuItems[philId] = new_item(philosophersStates[philId].c_str(), nullptr);
-
-    auto currentItem = myMenu->curitem;
+void Printing::closeMenu() {
 
     unpost_menu(myMenu);
+    free_menu(myMenu);
+    for (int i = 0; i < philosopherStatus.size(); ++i) {
+        free_item(myMenuItems[i]);
+    }
 
-    set_menu_items(myMenu, myMenuItems);
-    set_current_item(myMenu, currentItem);
+    endwin();
 
+}
+
+void Printing::updateMenu(int philosopherId, std::string status) {
+
+    std::lock_guard<std::mutex> lockGuard(menuMutex);
+    philosopherStatus[philosopherId] = std::move(status);
+    myMenuItems[philosopherId] = new_item(philosopherStatus[philosopherId].c_str(), nullptr);
+
+    auto currentMenuItem = myMenu->curitem;
+    unpost_menu(myMenu);
+    set_menu_items(myMenu,myMenuItems);
+    set_current_item(myMenu,currentMenuItem);
     post_menu(myMenu);
+
+    mvprintw(LINES - 2, 0, "ESC to stop threads");
     refresh();
 }

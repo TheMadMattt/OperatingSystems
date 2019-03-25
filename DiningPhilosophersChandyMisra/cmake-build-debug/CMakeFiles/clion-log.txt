@@ -1,4 +1,4 @@
-/home/mateusz/Programs/JetBrains/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra
+/home/mateusz/Programs/JetBrains/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug
+-- Build files have been written to: /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug

@@ -6,33 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.cpp
+Fork.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.h
+
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.h
 mutex
 -
 SyncingChannel.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.h
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.cpp
+random
+-
+Philosopher.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.h
+
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.h
 thread
 -
 Fork.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.h
 Printing.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.h
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.h
+SyncingChannel.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.h
 ncurses.h
--
-mutex
--
-vector
 -
 menu.h
 -
-SyncingChannel.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.h
+vector
+-
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.h
 mutex
 -
 condition_variable
@@ -40,17 +48,19 @@ condition_variable
 atomic
 -
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.cpp
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.cpp
 Table.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.h
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.h
-vector
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.h
+deque
 -
 Philosopher.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.h
-Fork.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h
-Printing.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.h
+
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/main.cpp
+iostream
+-
+Table.h
+/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.h
 

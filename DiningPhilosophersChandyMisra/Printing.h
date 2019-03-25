@@ -1,39 +1,43 @@
 //
-// Created by mateusz on 24.03.19.
+// Created by mateusz on 25.03.19.
 //
 
 #ifndef DININGPHILOSOPHERSCHANDYMISRA_PRINTING_H
 #define DININGPHILOSOPHERSCHANDYMISRA_PRINTING_H
 
-#include <ncurses.h>
-#include <mutex>
-#include <vector>
-#include <menu.h>
-#include "SyncingChannel.h"
 
+#include "SyncingChannel.h"
+#include <ncurses.h>
+#include <menu.h>
+#include <vector>
 
 class Printing {
+
 public:
-    explicit Printing(TableSetup &table, int philsNumber);
+    explicit Printing(TableSetup &tableSetup);
     ~Printing();
 
-    void start();
-    void createMenu(std::vector<std::string> philosophersStates);
 
-    void updateMenu(int philId, std::string state);
+    void menu();
+    void createMenu(std::vector<std::string> philosophersStatus);
+
+    void updateMenu(int philosopherId, std::string status);
 
 private:
-    std::mutex menuLock;
-    std::vector<std::string> philosophersStates;
-    int philsNumber;
 
-    TableSetup &table;
+    std::mutex menuMutex;
+    std::vector<std::string> philosopherStatus;
 
-    ITEM** myMenuItems = nullptr;
+    TableSetup &tableSetup;
+
+    ITEM **myMenuItems = nullptr;
     MENU* myMenu = nullptr;
 
     void init();
+
     void stop();
+
+    void closeMenu();
 };
 
 

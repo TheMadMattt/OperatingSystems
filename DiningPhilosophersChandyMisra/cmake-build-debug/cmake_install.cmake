@@ -1,4 +1,4 @@
-# Install script for directory: /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra
+# Install script for directory: /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

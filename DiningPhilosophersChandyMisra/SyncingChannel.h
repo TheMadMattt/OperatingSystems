@@ -1,3 +1,6 @@
+//
+// Created by mateusz on 25.03.19.
+//
 
 #ifndef DININGPHILOSOPHERSCHANDYMISRA_SYNCINGCHANNEL_H
 #define DININGPHILOSOPHERSCHANDYMISRA_SYNCINGCHANNEL_H
@@ -8,17 +11,22 @@
 #include <atomic>
 
 class SyncingChannel {
-    std::mutex mutex;
-    std::condition_variable condition;
 
 public:
+
     void wait();
-    void notifyAll();
+    void notifyAllThreads();
+
+private:
+
+    std::mutex mutexLock;
+    std::condition_variable conditionVariable;
+
 };
 
 struct TableSetup{
-    std::atomic<bool> done{false};
-    SyncingChannel channel;
+    SyncingChannel syncChannel;
+    std::atomic<bool> finishedDinner {false};
 };
 
 

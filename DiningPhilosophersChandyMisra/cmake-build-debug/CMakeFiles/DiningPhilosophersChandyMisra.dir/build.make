@@ -43,10 +43,10 @@ RM = /home/mateusz/Programs/JetBrains/apps/CLion/ch-0/183.5429.37/bin/cmake/linu
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra
+CMAKE_SOURCE_DIR = /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug
+CMAKE_BINARY_DIR = /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DiningPhilosophersChandyMisra.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/DiningPhilosophersChandyMisra.dir/flags.make
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.o: CMakeFiles/DiningPhilosophersChandyMisra.dir/flags.make
 CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.o -c /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/main.cpp
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/main.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/main.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.i
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/main.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/main.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/main.cpp.s
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.o: CMakeFiles/DiningPhilosophersChandyMisra.dir/flags.make
 CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.o: ../SyncingChannel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.o -c /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.cpp
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.i
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/SyncingChannel.cpp.s
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o: CMakeFiles/DiningPhilosophersChandyMisra.dir/flags.make
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o: ../Fork.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.o -c /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.cpp
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.i
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Fork.cpp.s
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o: CMakeFiles/DiningPhilosophersChandyMisra.dir/flags.make
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o: ../Philosopher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.o -c /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.cpp
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.i
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Philosopher.cpp.s
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o: CMakeFiles/DiningPhilosophersChandyMisra.dir/flags.make
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o: ../Table.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.o -c /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.cpp
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.i
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Table.cpp.s
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o: CMakeFiles/DiningPhilosophersChandyMisra.dir/flags.make
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o: ../Printing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o -c /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.cpp
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.cpp > CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.i
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.cpp -o CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.s
 
 # Object files for target DiningPhilosophersChandyMisra
 DiningPhilosophersChandyMisra_OBJECTS = \
@@ -155,7 +155,7 @@ DiningPhilosophersChandyMisra: CMakeFiles/DiningPhilosophersChandyMisra.dir/Tabl
 DiningPhilosophersChandyMisra: CMakeFiles/DiningPhilosophersChandyMisra.dir/Printing.cpp.o
 DiningPhilosophersChandyMisra: CMakeFiles/DiningPhilosophersChandyMisra.dir/build.make
 DiningPhilosophersChandyMisra: CMakeFiles/DiningPhilosophersChandyMisra.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable DiningPhilosophersChandyMisra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable DiningPhilosophersChandyMisra"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DiningPhilosophersChandyMisra.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -168,6 +168,6 @@ CMakeFiles/DiningPhilosophersChandyMisra.dir/clean:
 .PHONY : CMakeFiles/DiningPhilosophersChandyMisra.dir/clean
 
 CMakeFiles/DiningPhilosophersChandyMisra.dir/depend:
-	cd /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug /home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/cmake-build-debug/CMakeFiles/DiningPhilosophersChandyMisra.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/DiningPhilosophersChandyMisra.dir/depend
 

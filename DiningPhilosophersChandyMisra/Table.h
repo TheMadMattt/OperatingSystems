@@ -1,31 +1,35 @@
+//
+// Created by mateusz on 25.03.19.
+//
+
 #ifndef DININGPHILOSOPHERSCHANDYMISRA_TABLE_H
 #define DININGPHILOSOPHERSCHANDYMISRA_TABLE_H
 
-#include <vector>
+#include <deque>
 #include "Philosopher.h"
-#include "Fork.h"
-#include "Printing.h"
 
 class Table {
 
 public:
-    Table(int philosopherNumber);
+
+    Table(int philosophersNumber);
+
+    std::vector<std::string> getPhilosophersStatus();
 
     void startDinner();
-    std::vector<std::string> getPhilosophersStates();
 
     int philosophersNumber;
-    TableSetup table;
+
+    TableSetup tableSetup;
     Printing print;
-
 private:
-    std::vector<Philosopher> philosophersList;
-    std::vector<Fork> forksList;
 
-    void createForks();
+    std::deque<Philosopher> philosophersList;
+    std::deque<Fork> forksList;
+
     void createPhilosophers();
-
-    void stop();
+    void createForks();
+    void stopDinner();
 };
 
 
