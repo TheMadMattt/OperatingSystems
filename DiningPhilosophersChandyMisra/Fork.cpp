@@ -44,18 +44,18 @@ std::mutex &Fork::getForkMutex() {
 
 std::string Fork::getForkStatus() {
 
-    std::string message = "Fork" + std::to_string(id);
+    std::string message = "Fork" + std::to_string(id) + " -> Phil" + std::to_string(ownerId);
 
     switch(status){
         case ForkStatus::DIRTY:
-            message += " is DIRTY";
+            message += " : DIRTY";
             break;
         case ForkStatus::CLEAN:
-            message += " is CLEAN";
+            message += " : CLEAN";
             break;
     }
 
-    return message + " -> Phil" + std::to_string(ownerId);
+    return message;
 }
 
 void Fork::setForkStatus(ForkStatus newStatus) {

@@ -6,61 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.cpp
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.cpp
 Fork.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h
 
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h
 mutex
 -
 SyncingChannel.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.h
 
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.cpp
-random
--
-Philosopher.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.h
-
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.h
-thread
--
-Fork.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Fork.h
-Printing.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.h
-
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Printing.h
-SyncingChannel.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.h
-ncurses.h
--
-menu.h
--
-vector
--
-
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/SyncingChannel.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.h
 mutex
 -
 condition_variable
 -
 atomic
 -
-
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.cpp
-Table.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.h
-
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.h
-deque
--
-Philosopher.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Philosopher.h
-
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/main.cpp
-iostream
--
-Table.h
-/home/mateusz/Dokumenty/DiningPhilosophersChandyMisra/Table.h
 
