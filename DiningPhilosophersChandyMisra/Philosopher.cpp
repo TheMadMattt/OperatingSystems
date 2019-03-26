@@ -11,7 +11,9 @@ Philosopher::Philosopher(int id, TableSetup &tableSetup, Fork &leftFork, Fork &r
         leftFork(leftFork),
         rightFork(rightFork),
         philosopherThread(&Philosopher::startDinnerThread,this),
-        print(print)
+        print(print),
+        status(PhilosopherStatus::THINKING),
+        cycle(0)
 {
 }
 
@@ -21,7 +23,9 @@ Philosopher::Philosopher(Philosopher &&other) noexcept
         leftFork(other.leftFork),
         rightFork(other.rightFork),
         philosopherThread(std::move(other.philosopherThread)),
-        print(other.print)
+        print(other.print),
+        status(other.status),
+        cycle(other.cycle)
 {
 }
 
@@ -36,7 +40,7 @@ Philosopher::~Philosopher() {
 void Philosopher::thinking() {
 
     for (int i = 0; i < 5; ++i) {
-        sleepRandom(0,1);
+        sleepRandom(0,1000);
 
         setStatus(PhilosopherStatus::THINKING);
     }
@@ -47,16 +51,13 @@ void Philosopher::eating() {
 
     requestForks();
 
-    std::lock(leftFork.getForkMutex(), rightFork.getForkMutex());
-
-    std::lock_guard<std::mutex> leftForkLock(leftFork.getForkMutex(), std::adopt_lock);
-    std::lock_guard<std::mutex> rightForkLock(rightFork.getForkMutex(), std::adopt_lock);
+    std::scoped_lock scopedLock(leftFork.getForkMutex(), rightFork.getForkMutex());
 
     leftFork.setForkStatus(ForkStatus::DIRTY);
     rightFork.setForkStatus(ForkStatus::DIRTY);
 
     for (int i = 0; i < 5; ++i) {
-        sleepRandom(0,1);
+        sleepRandom(0,1000);
 
         setStatus(PhilosopherStatus::EATING);
     }
@@ -139,6 +140,7 @@ void Philosopher::startDinnerThread() {
     do{
         thinking();
         eating();
+        ++cycle;
     }while(!tableSetup.finishedDinner);
 
     finishDinner();
@@ -174,4 +176,10 @@ void Philosopher::finishDinner() {
     if(philosopherThread.joinable()){
         philosopherThread.detach();
     }
+}
+
+int Philosopher::getDinnerCycle() {
+
+    return cycle;
+
 }

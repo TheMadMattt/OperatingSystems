@@ -8,7 +8,8 @@ Fork::Fork(int id, int philosopherId, TableSetup &tableSetup)
     :   id(id),
         ownerId(philosopherId),
         isDirty(true),
-        tableSetup(tableSetup)
+        tableSetup(tableSetup),
+        status(ForkStatus::DIRTY)
 {
 }
 
@@ -16,7 +17,8 @@ Fork::Fork(const Fork &otherFork)
     :   id(otherFork.id),
         ownerId(otherFork.ownerId),
         isDirty(otherFork.isDirty),
-        tableSetup(otherFork.tableSetup)
+        tableSetup(otherFork.tableSetup),
+        status(otherFork.status)
 {
 }
 

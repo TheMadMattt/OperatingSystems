@@ -20,20 +20,26 @@ Printing::~Printing() {
 
 void Printing::menu() {
 
-    int c;
+    int key;
     bool finished = false;
 
-    while((c = getch()) && !finished)
+    while((key = getch()) && !finished)
     {
         std::lock_guard<std::mutex> lockGuard(menuMutex);
-        switch(c)
+        switch(key)
         {	case KEY_DOWN:
                 menu_driver(myMenu, REQ_DOWN_ITEM);
                 break;
             case KEY_UP:
                 menu_driver(myMenu, REQ_UP_ITEM);
                 break;
-            case 27:
+            case KEY_PPAGE:
+                menu_driver(myMenu, REQ_SCR_UPAGE);
+                break;
+            case KEY_NPAGE:
+                menu_driver(myMenu, REQ_SCR_DPAGE);
+                break;
+            case 27: //ESC
                 stop();
                 finished = true;
                 break;
@@ -47,7 +53,7 @@ void Printing::menu() {
 void Printing::createMenu(std::vector<std::string> philosophersStatus) {
 
     init();
-    int philosophersNumber = static_cast<int>(philosophersStatus.size());
+    auto philosophersNumber = static_cast<int>(philosophersStatus.size());
     this->philosopherStatus = std::move(philosophersStatus);
     myMenuItems = new ITEM*[philosophersNumber];
 
@@ -73,9 +79,7 @@ void Printing::init() {
 }
 
 void Printing::stop() {
-
     tableSetup.finishedDinner = true;
-
 }
 
 void Printing::closeMenu() {

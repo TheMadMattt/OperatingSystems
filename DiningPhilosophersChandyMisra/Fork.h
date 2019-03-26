@@ -31,7 +31,7 @@ public:
 private:
     int id;
     int ownerId;
-    ForkStatus status = ForkStatus::DIRTY;
+    ForkStatus status;
     bool isDirty;
 
     std::mutex forkMutex;

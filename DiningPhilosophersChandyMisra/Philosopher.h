@@ -42,7 +42,9 @@ private:
 
     Printing &print;
 
-    PhilosopherStatus status = PhilosopherStatus::THINKING;
+    PhilosopherStatus status;
+
+    int cycle = 0;
 
     void thinking();
     void eating();
@@ -53,6 +55,7 @@ private:
     void setStatus(PhilosopherStatus status);
 
     void sleepRandom(int min, int max);
+    int getDinnerCycle();
 };
 
 
