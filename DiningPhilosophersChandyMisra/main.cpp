@@ -25,4 +25,8 @@ int main() {
         Table table(5);
         table.startDinner();
     }
+
+    std::cout << "Main exited normally..." << std::endl;
+
+    return 0;
 }

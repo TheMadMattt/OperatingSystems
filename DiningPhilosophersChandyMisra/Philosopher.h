@@ -29,6 +29,7 @@ public:
     ~Philosopher();
 
     std::string getPhilosopherStatus();
+    std::string getDinnerCycle();
 
     void startDinnerThread();
 
@@ -55,7 +56,6 @@ private:
     void setStatus(PhilosopherStatus status);
 
     void sleepRandom(int min, int max);
-    int getDinnerCycle();
 };
 
 

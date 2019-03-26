@@ -10,7 +10,7 @@ Table::Table(int philosophersNumber)
 {
     createForks();
     createPhilosophers();
-    print.createMenu(getPhilosophersStatus());
+    print.createMenu(getPhilosophersStatus(), getPhilosophersCycle());
 }
 
 std::vector<std::string> Table::getPhilosophersStatus() {
@@ -56,4 +56,15 @@ void Table::startDinner() {
 void Table::stopDinner() {
 
     tableSetup.finishedDinner = true;
+}
+
+std::vector<std::string> Table::getPhilosophersCycle() {
+
+    auto cycles = std::vector<std::string>();
+
+    for(auto &philosopher : philosophersList)
+        cycles.emplace_back(philosopher.getDinnerCycle());
+    cycles.emplace_back("\0");
+
+    return cycles;
 }

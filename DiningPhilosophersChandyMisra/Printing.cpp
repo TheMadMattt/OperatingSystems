@@ -2,6 +2,10 @@
 
 #include <utility>
 
+#include <utility>
+
+#include <utility>
+
 //
 // Created by mateusz on 25.03.19.
 //
@@ -50,15 +54,16 @@ void Printing::menu() {
     }
 }
 
-void Printing::createMenu(std::vector<std::string> philosophersStatus) {
+void Printing::createMenu(std::vector<std::string> philosophersStatus, std::vector<std::string> philosophersCycles) {
 
     init();
     auto philosophersNumber = static_cast<int>(philosophersStatus.size());
-    this->philosopherStatus = std::move(philosophersStatus);
+    this->philosophersStatus = std::move(philosophersStatus);
+    this->philosophersCycles = std::move(philosophersCycles);
     myMenuItems = new ITEM*[philosophersNumber];
 
     for (int i = 0; i < philosophersNumber; ++i) {
-        myMenuItems[i] = new_item(this->philosopherStatus[i].c_str(), nullptr);
+        myMenuItems[i] = new_item(this->philosophersStatus[i].c_str(), this->philosophersCycles[i].c_str());
     }
 
     myMenu = new_menu(myMenuItems);
@@ -86,7 +91,7 @@ void Printing::closeMenu() {
 
     unpost_menu(myMenu);
     free_menu(myMenu);
-    for (int i = 0; i < philosopherStatus.size(); ++i) {
+    for (int i = 0; i < philosophersStatus.size(); ++i) {
         free_item(myMenuItems[i]);
     }
 
@@ -94,11 +99,13 @@ void Printing::closeMenu() {
 
 }
 
-void Printing::updateMenu(int philosopherId, std::string status) {
+void Printing::updateMenu(int philosopherId, std::string status, std::string cycle) {
 
     std::lock_guard<std::mutex> lockGuard(menuMutex);
-    philosopherStatus[philosopherId] = std::move(status);
-    myMenuItems[philosopherId] = new_item(philosopherStatus[philosopherId].c_str(), nullptr);
+    philosophersStatus[philosopherId] = std::move(status);
+    philosophersCycles[philosopherId] = std::move(cycle);
+    myMenuItems[philosopherId] = new_item(philosophersStatus[philosopherId].c_str(),
+            this->philosophersCycles[philosopherId].c_str());
 
     auto currentMenuItem = myMenu->curitem;
     unpost_menu(myMenu);

@@ -163,7 +163,7 @@ void Philosopher::setStatus(PhilosopherStatus status) {
 
     this->status = status;
 
-    print.updateMenu(id,getPhilosopherStatus());
+    print.updateMenu(id,getPhilosopherStatus(), getDinnerCycle());
 
 }
 
@@ -178,8 +178,8 @@ void Philosopher::finishDinner() {
     }
 }
 
-int Philosopher::getDinnerCycle() {
+std::string Philosopher::getDinnerCycle() {
 
-    return cycle;
+    return "Cykl: " + std::to_string(cycle);
 
 }

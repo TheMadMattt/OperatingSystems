@@ -6,7 +6,31 @@
 
 #IncludeRegexTransform: 
 
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h
+mutex
+-
+SyncingChannel.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/SyncingChannel.h
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.cpp
+random
+-
+Philosopher.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.h
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.h
+thread
+-
+Fork.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Fork.h
+Printing.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.h
+
 /home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Printing.cpp
+utility
+-
+utility
+-
 utility
 -
 utility
@@ -31,4 +55,20 @@ condition_variable
 -
 atomic
 -
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.cpp
+Table.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.h
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.h
+deque
+-
+Philosopher.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Philosopher.h
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/main.cpp
+iostream
+-
+Table.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/DiningPhilosophersChandyMisra/Table.h
 

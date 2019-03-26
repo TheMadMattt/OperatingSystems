@@ -15,6 +15,7 @@ public:
     Table(int philosophersNumber);
 
     std::vector<std::string> getPhilosophersStatus();
+    std::vector<std::string> getPhilosophersCycle();
 
     void startDinner();
 
