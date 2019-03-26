@@ -52,7 +52,7 @@ private:
 
     void setStatus(PhilosopherStatus status);
 
-    void sleepRandom(double min, double max);
+    void sleepRandom(int min, int max);
 };
 
 

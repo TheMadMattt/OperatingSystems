@@ -35,9 +35,12 @@ Philosopher::~Philosopher() {
 
 void Philosopher::thinking() {
 
-    sleepRandom(2.5,3.5);
+    for (int i = 0; i < 5; ++i) {
+        sleepRandom(0,1);
 
-    setStatus(PhilosopherStatus::THINKING);
+        setStatus(PhilosopherStatus::THINKING);
+    }
+
 }
 
 void Philosopher::eating() {
@@ -52,8 +55,11 @@ void Philosopher::eating() {
     leftFork.setForkStatus(ForkStatus::DIRTY);
     rightFork.setForkStatus(ForkStatus::DIRTY);
 
-    setStatus(PhilosopherStatus::EATING);
-    sleepRandom(2.5,3.5);
+    for (int i = 0; i < 5; ++i) {
+        sleepRandom(0,1);
+
+        setStatus(PhilosopherStatus::EATING);
+    }
 
     putDownForks();
 }
@@ -64,7 +70,7 @@ void Philosopher::requestForks() {
 
     std::random_device rd;
     std::mt19937 mt(rd());
-    static thread_local std::uniform_int_distribution<> generator(1, 2);
+    std::uniform_int_distribution<> generator(1, 2);
 
     if(generator(mt) == 1){
         leftFork.requestFork(id);
@@ -84,7 +90,6 @@ void Philosopher::putDownForks() {
 
     rightFork.putDownFork();
     setStatus(PhilosopherStatus::PUT_DOWN_RIGHT_FORK);
-    sleepRandom(0,0.5);
 
     setStatus(PhilosopherStatus::THINKING);
 
@@ -140,11 +145,15 @@ void Philosopher::startDinnerThread() {
 
 }
 
-void Philosopher::sleepRandom(double min, double max) {
+void Philosopher::sleepRandom(int min, int max) {
 
-    int randSleepTime = static_cast<int>(((max - min) * ((double) rand() / (double) RAND_MAX) + min) * 1000000);
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_int_distribution<> generator(min, max);
 
-    std::this_thread::sleep_for(std::chrono::microseconds(randSleepTime));
+    int randSleepTime = generator(mt);
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(randSleepTime));
 
 }
 

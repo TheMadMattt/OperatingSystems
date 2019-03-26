@@ -17,7 +17,7 @@ class Fork {
 
 public:
 
-    Fork(int id, int philosopherId);
+    Fork(int id, int philosopherId, TableSetup &tableSetup);
     Fork(const Fork& otherFork);
 
     void requestFork(int philosopherId);
@@ -35,7 +35,7 @@ private:
     bool isDirty;
 
     std::mutex forkMutex;
-    SyncingChannel channel;
+    TableSetup &tableSetup;
 
 };
 

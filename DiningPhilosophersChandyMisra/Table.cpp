@@ -27,9 +27,9 @@ void Table::createForks() {
 
     for(int i = 0; i < philosophersNumber; i++) {
         if(i == philosophersNumber - 1)
-            forksList.emplace_back(i, 0);
+            forksList.emplace_back(i, 0, tableSetup);
         else
-            forksList.emplace_back(i, i);
+            forksList.emplace_back(i, i, tableSetup);
     }
 }
 

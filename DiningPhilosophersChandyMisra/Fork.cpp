@@ -4,17 +4,19 @@
 
 #include "Fork.h"
 
-Fork::Fork(int id, int philosopherId)
+Fork::Fork(int id, int philosopherId, TableSetup &tableSetup)
     :   id(id),
         ownerId(philosopherId),
-        isDirty(true)
+        isDirty(true),
+        tableSetup(tableSetup)
 {
 }
 
 Fork::Fork(const Fork &otherFork)
     :   id(otherFork.id),
         ownerId(otherFork.ownerId),
-        isDirty(otherFork.isDirty)
+        isDirty(otherFork.isDirty),
+        tableSetup(otherFork.tableSetup)
 {
 }
 
@@ -23,11 +25,11 @@ void Fork::requestFork(int philosopherId) {
     while (ownerId != philosopherId){
         if(isDirty){
             std::lock_guard<std::mutex> lockGuard(forkMutex);
-            status = ForkStatus::CLEAN;
             isDirty = false;
+            status = ForkStatus::CLEAN;
             ownerId = philosopherId;
         }else{
-            channel.wait();
+            tableSetup.syncChannel.wait();
         }
     }
 }
@@ -35,7 +37,7 @@ void Fork::requestFork(int philosopherId) {
 void Fork::putDownFork() {
     isDirty = true;
 
-    channel.notifyAllThreads();
+    tableSetup.syncChannel.notifyAllThreads();
 }
 
 std::mutex &Fork::getForkMutex() {
