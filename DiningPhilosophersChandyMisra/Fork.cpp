@@ -48,7 +48,7 @@ std::mutex &Fork::getForkMutex() {
 
 std::string Fork::getForkStatus() {
 
-    std::string message = "Fork" + std::to_string(id) + " -> Phil" + std::to_string(ownerId);
+    std::string message = "| Fork" + std::to_string(id) + " -> Phil" + std::to_string(ownerId);
 
     switch(status){
         case ForkStatus::DIRTY:
@@ -64,4 +64,9 @@ std::string Fork::getForkStatus() {
 
 void Fork::setForkStatus(ForkStatus newStatus) {
     status = newStatus;
+}
+
+int Fork::getId() {
+
+    return id;
 }

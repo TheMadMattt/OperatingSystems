@@ -16,6 +16,7 @@ public:
 
     std::vector<std::string> getPhilosophersStatus();
     std::vector<std::string> getPhilosophersCycle();
+    std::vector<std::string> getPhilosophersForks();
 
     void startDinner();
 

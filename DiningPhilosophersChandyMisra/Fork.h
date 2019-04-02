@@ -27,6 +27,7 @@ public:
 
     std::string getForkStatus();
     void setForkStatus(ForkStatus newStatus);
+    int getId();
 
 private:
     int id;

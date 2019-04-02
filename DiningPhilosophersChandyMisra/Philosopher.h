@@ -30,6 +30,8 @@ public:
 
     std::string getPhilosopherStatus();
     std::string getDinnerCycle();
+    std::string getPhiloForks();
+
 
     void startDinnerThread();
 

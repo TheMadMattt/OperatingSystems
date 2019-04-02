@@ -19,7 +19,8 @@ public:
 
 
     void menu();
-    void createMenu(std::vector<std::string> philosophersStatus, std::vector<std::string> philosophersCycles);
+    void createMenu(std::vector<std::string> philosophersCycles, std::vector<std::string> philosophersStatus,
+            std::vector<std::string> philoForks);
 
     void updateMenu(int philosopherId, std::string status, std::string cycle);
 
@@ -28,6 +29,8 @@ private:
     std::mutex menuMutex;
     std::vector<std::string> philosophersStatus;
     std::vector<std::string> philosophersCycles;
+    std::vector<std::string> philoForksStatus;
+    int philosophersNumber;
 
     TableSetup &tableSetup;
 

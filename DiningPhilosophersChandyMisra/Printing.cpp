@@ -6,6 +6,8 @@
 
 #include <utility>
 
+#include <utility>
+
 //
 // Created by mateusz on 25.03.19.
 //
@@ -54,22 +56,28 @@ void Printing::menu() {
     }
 }
 
-void Printing::createMenu(std::vector<std::string> philosophersStatus, std::vector<std::string> philosophersCycles) {
+void Printing::createMenu(std::vector<std::string> philosophersCycles, std::vector<std::string> philosophersStatus,
+                          std::vector<std::string> philoForks) {
 
     init();
-    auto philosophersNumber = static_cast<int>(philosophersStatus.size());
+    this-> philosophersNumber = static_cast<int>(philosophersStatus.size());
+    this->philoForksStatus = std::move(philoForks);
     this->philosophersStatus = std::move(philosophersStatus);
     this->philosophersCycles = std::move(philosophersCycles);
     myMenuItems = new ITEM*[philosophersNumber];
 
     for (int i = 0; i < philosophersNumber; ++i) {
-        myMenuItems[i] = new_item(this->philosophersStatus[i].c_str(), this->philosophersCycles[i].c_str());
+        myMenuItems[i] = new_item(this->philosophersCycles[i].c_str(), this->philosophersStatus[i].c_str());
     }
 
     myMenu = new_menu(myMenuItems);
     set_menu_mark(myMenu, " ");
     refresh();
     post_menu(myMenu);
+
+    for (int i = 0; i < philosophersNumber; ++i) {
+        mvprintw(LINES - 10 + i, 0, philoForksStatus[i].c_str());
+    }
 
     mvprintw(LINES - 2, 0, "ESC to stop threads");
     refresh();
@@ -104,14 +112,18 @@ void Printing::updateMenu(int philosopherId, std::string status, std::string cyc
     std::lock_guard<std::mutex> lockGuard(menuMutex);
     philosophersStatus[philosopherId] = std::move(status);
     philosophersCycles[philosopherId] = std::move(cycle);
-    myMenuItems[philosopherId] = new_item(philosophersStatus[philosopherId].c_str(),
-            this->philosophersCycles[philosopherId].c_str());
+    myMenuItems[philosopherId] = new_item(philosophersCycles[philosopherId].c_str(),
+            this->philosophersStatus[philosopherId].c_str());
 
     auto currentMenuItem = myMenu->curitem;
     unpost_menu(myMenu);
     set_menu_items(myMenu,myMenuItems);
     set_current_item(myMenu,currentMenuItem);
     post_menu(myMenu);
+
+    for (int i = 0; i < philosophersNumber; ++i) {
+        mvprintw(LINES - 10 + i, 0, philoForksStatus[i].c_str());
+    }
 
     mvprintw(LINES - 2, 0, "ESC to stop threads");
     refresh();

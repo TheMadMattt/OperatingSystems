@@ -39,8 +39,8 @@ Philosopher::~Philosopher() {
 
 void Philosopher::thinking() {
 
-    for (int i = 0; i < 5; ++i) {
-        sleepRandom(0,1000);
+    for (int i = 0; i < 8; ++i) {
+        sleepRandom(0,800);
 
         setStatus(PhilosopherStatus::THINKING);
     }
@@ -56,8 +56,8 @@ void Philosopher::eating() {
     leftFork.setForkStatus(ForkStatus::DIRTY);
     rightFork.setForkStatus(ForkStatus::DIRTY);
 
-    for (int i = 0; i < 5; ++i) {
-        sleepRandom(0,1000);
+    for (int i = 0; i < 8; ++i) {
+        sleepRandom(0,800);
 
         setStatus(PhilosopherStatus::EATING);
     }
@@ -101,7 +101,7 @@ void Philosopher::putDownForks() {
 std::string Philosopher::getPhilosopherStatus() {
 
     std::string forkMessage = leftFork.getForkStatus();
-    std::string message = "Phil" + std::to_string(id);
+    std::string message = "| Phil" + std::to_string(id);
 
     switch(status){
         case PhilosopherStatus::THINKING:
@@ -182,4 +182,10 @@ std::string Philosopher::getDinnerCycle() {
 
     return "Cykl: " + std::to_string(cycle);
 
+}
+
+std::string Philosopher::getPhiloForks() {
+
+    return "Philo"+std::to_string(id)+" has Forks " + std::to_string(leftFork.getId()) + " and " +
+            std::to_string(rightFork.getId());
 }
