@@ -26,20 +26,14 @@ std::vector<std::string> Table::getPhilosophersStatus() {
 void Table::createForks() {
 
     for(int i = 0; i < philosophersNumber; i++) {
-        if(i == philosophersNumber - 1)
-            forksList.emplace_back(i, 0, tableSetup);
-        else
-            forksList.emplace_back(i, i, tableSetup);
+        forksList.emplace_back(i%philosophersNumber, i%philosophersNumber, tableSetup);
     }
 }
 
 void Table::createPhilosophers() {
 
-    for(uint i = 0; i < philosophersNumber; i++) {
-        if (i == philosophersNumber - 1)
-            philosophersList.emplace_back(i, tableSetup, forksList[i], forksList[0], print);
-        else
-            philosophersList.emplace_back(i, tableSetup, forksList[i], forksList[i+1], print);
+    for(int i = 0; i < philosophersNumber; i++) {
+        philosophersList.emplace_back(i, tableSetup, forksList[i % philosophersNumber], forksList[(i+1)%philosophersNumber], print);
     }
 }
 
