@@ -6,8 +6,21 @@
 #define HOUSEMULTITHREADING_ADULT_H
 
 
-class Adult {
+#include "Person.h"
 
+class Adult: public Person {
+
+public:
+    Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print);
+
+    Adult(Adult &&other);
+
+    ~Adult();
+
+    void startHouse() override;
+
+private:
+    std::thread adultThread;
 };
 
 

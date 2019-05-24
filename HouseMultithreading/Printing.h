@@ -14,7 +14,7 @@
 class Printing {
 
 public:
-    explicit Printing(TableSetup &tableSetup);
+    explicit Printing(HouseSetup &tableSetup);
     ~Printing();
 
 
@@ -32,7 +32,7 @@ private:
     std::vector<std::string> philoForksStatus;
     int philosophersNumber;
 
-    TableSetup &tableSetup;
+    HouseSetup &tableSetup;
 
     ITEM **myMenuItems = nullptr;
     MENU* myMenu = nullptr;

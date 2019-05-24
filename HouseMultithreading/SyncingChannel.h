@@ -24,7 +24,7 @@ private:
 
 };
 
-struct TableSetup{
+struct HouseSetup{
     SyncingChannel syncChannel;
     std::atomic<bool> finishedDinner {false};
 };

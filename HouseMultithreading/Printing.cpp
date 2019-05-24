@@ -1,7 +1,7 @@
 #include <utility>
 #include "Printing.h"
 
-Printing::Printing(TableSetup &tableSetup)
+Printing::Printing(HouseSetup &tableSetup)
     :   tableSetup(tableSetup)
 {
 }
