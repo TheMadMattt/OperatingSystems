@@ -17,11 +17,11 @@ House::House(int adultsNumber, int childrenNumber)
 void House::createPersons() {
 
     for(int i = 0; i < adultsNumber; ++i) {
-        persons.emplace_back(Adult(i,35,houseSetup,print));
+        persons.push_back(new Adult(i,35,houseSetup,print));
     }
 
     for (int j = 0; j < childrenNumber; ++j) {
-        persons.emplace_back(Child(j+adultsNumber,16,houseSetup,print));
+        persons.push_back(new Child(j+adultsNumber,16,houseSetup,print));
     }
 
 }

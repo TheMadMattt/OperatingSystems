@@ -21,7 +21,7 @@ private:
     int adultsNumber;
     int childrenNumber;
 
-    std::deque<Person> persons;
+    std::deque<Person*> persons;
 
     void createPersons();
 

@@ -11,9 +11,7 @@
 class Child: public Person {
 public:
     Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print);
-
-    Child(Child &&other);
-
+    Child(Child &&other) noexcept ;
     ~Child();
 
     void startHouse() override;

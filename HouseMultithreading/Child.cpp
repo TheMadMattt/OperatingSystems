@@ -28,5 +28,5 @@ Child::~Child() {
     }
 }
 
-Child::Child(Child &&other) : Person(std::move(other)), childThread(std::move(other.childThread)) {}
+Child::Child(Child &&other) noexcept : Person(std::move(other)), childThread(std::move(other.childThread)) {}
 

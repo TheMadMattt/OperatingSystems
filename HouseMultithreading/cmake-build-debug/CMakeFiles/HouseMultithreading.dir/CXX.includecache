@@ -6,9 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.cpp
+iostream
+-
+Adult.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.h
+
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.h
 Person.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.h
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.cpp
+iostream
+-
+Child.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.h
 
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.h
 Person.h
@@ -53,4 +65,16 @@ condition_variable
 -
 atomic
 -
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/main.cpp
+iostream
+-
+Person.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.h
+Child.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.h
+Adult.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.h
+House.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.h
 
