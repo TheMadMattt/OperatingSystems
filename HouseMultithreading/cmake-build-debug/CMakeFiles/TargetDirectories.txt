@@ -1,0 +1,3 @@
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/edit_cache.dir
