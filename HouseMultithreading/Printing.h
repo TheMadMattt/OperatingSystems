@@ -6,7 +6,7 @@
 #define DININGPHILOSOPHERSCHANDYMISRA_PRINTING_H
 
 
-#include "SyncingChannel.h"
+#include "HouseSetup.h"
 #include <ncurses.h>
 #include <menu.h>
 #include <vector>

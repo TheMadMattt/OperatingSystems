@@ -3,12 +3,12 @@
 //
 
 #include <random>
+#include <thread>
 #include "Person.h"
 
-Person::Person(int id, unsigned int age, HouseSetup &houseSetup, Printing &print)
+Person::Person(int id, unsigned int age, Printing &print)
     :   id(id),
         age(age),
-        houseSetup(houseSetup),
         print(print)
 {}
 
@@ -16,7 +16,6 @@ Person::Person(int id, unsigned int age, HouseSetup &houseSetup, Printing &print
 Person::Person(Person &&other) noexcept
     :   id(other.id),
         age(other.age),
-        houseSetup(other.houseSetup),
         print(other.print)
 {}
 

@@ -102,6 +102,12 @@
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.cpp">
 			<Option target="HouseMultithreading"/>
 		</Unit>
@@ -112,12 +118,6 @@
 			<Option target="HouseMultithreading"/>
 		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h">
-			<Option target="HouseMultithreading"/>
-		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/SyncingChannel.cpp">
-			<Option target="HouseMultithreading"/>
-		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/SyncingChannel.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/main.cpp">

@@ -2,18 +2,22 @@
 // Created by mateusz on 25.03.19.
 //
 
-#include "SyncingChannel.h"
+#include "HouseSetup.h"
 
-void SyncingChannel::wait() {
+void HouseSetup::wait() {
 
     std::unique_lock<std::mutex> uniqueLock(mutexLock);
 
-    conditionVariable.wait(uniqueLock);
+    conditionVariable.wait(uniqueLock, [this]{
+        return this->isReady;
+    });
 }
 
-void SyncingChannel::notifyAllThreads() {
+void HouseSetup::notifyAllThreads() {
 
     std::unique_lock<std::mutex> uniqueLock(mutexLock);
+
+    isReady = true;
 
     conditionVariable.notify_all();
 

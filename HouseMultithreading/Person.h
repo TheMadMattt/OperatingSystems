@@ -6,21 +6,18 @@
 #define HOUSEMULTITHREADING_PERSON_H
 
 
-#include "SyncingChannel.h"
+#include "HouseSetup.h"
 #include "Printing.h"
-#include <thread>
 
 class Person {
 public:
-    Person(int id, unsigned int age, HouseSetup &houseSetup, Printing &print);
+    Person(int id, unsigned int age, Printing &print);
     Person(Person &&other) noexcept;
     ~Person();
 
     virtual void startHouse() {}
 
     void randomSleep(int min, int max);
-
-    HouseSetup &houseSetup;
 
 private:
     int id;

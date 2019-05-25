@@ -13,14 +13,12 @@ class Adult: public Person {
 public:
     Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print);
 
-    Adult(Adult &&other) noexcept ;
-
     ~Adult();
 
     void startHouse() override;
 
 private:
-    std::thread adultThread;
+    HouseSetup &houseSetup;
 };
 
 

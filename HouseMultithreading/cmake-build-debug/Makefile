@@ -204,6 +204,33 @@ House.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/House.cpp.s
 .PHONY : House.cpp.s
 
+HouseSetup.o: HouseSetup.cpp.o
+
+.PHONY : HouseSetup.o
+
+# target to build an object file
+HouseSetup.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o
+.PHONY : HouseSetup.cpp.o
+
+HouseSetup.i: HouseSetup.cpp.i
+
+.PHONY : HouseSetup.i
+
+# target to preprocess a source file
+HouseSetup.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.i
+.PHONY : HouseSetup.cpp.i
+
+HouseSetup.s: HouseSetup.cpp.s
+
+.PHONY : HouseSetup.s
+
+# target to generate assembly for a file
+HouseSetup.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.s
+.PHONY : HouseSetup.cpp.s
+
 Person.o: Person.cpp.o
 
 .PHONY : Person.o
@@ -258,33 +285,6 @@ Printing.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Printing.cpp.s
 .PHONY : Printing.cpp.s
 
-SyncingChannel.o: SyncingChannel.cpp.o
-
-.PHONY : SyncingChannel.o
-
-# target to build an object file
-SyncingChannel.cpp.o:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/SyncingChannel.cpp.o
-.PHONY : SyncingChannel.cpp.o
-
-SyncingChannel.i: SyncingChannel.cpp.i
-
-.PHONY : SyncingChannel.i
-
-# target to preprocess a source file
-SyncingChannel.cpp.i:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/SyncingChannel.cpp.i
-.PHONY : SyncingChannel.cpp.i
-
-SyncingChannel.s: SyncingChannel.cpp.s
-
-.PHONY : SyncingChannel.s
-
-# target to generate assembly for a file
-SyncingChannel.cpp.s:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/SyncingChannel.cpp.s
-.PHONY : SyncingChannel.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -330,15 +330,15 @@ help:
 	@echo "... House.o"
 	@echo "... House.i"
 	@echo "... House.s"
+	@echo "... HouseSetup.o"
+	@echo "... HouseSetup.i"
+	@echo "... HouseSetup.s"
 	@echo "... Person.o"
 	@echo "... Person.i"
 	@echo "... Person.s"
 	@echo "... Printing.o"
 	@echo "... Printing.i"
 	@echo "... Printing.s"
-	@echo "... SyncingChannel.o"
-	@echo "... SyncingChannel.i"
-	@echo "... SyncingChannel.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

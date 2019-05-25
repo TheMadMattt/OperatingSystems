@@ -7,6 +7,7 @@
 
 #include <deque>
 #include "Person.h"
+#include <thread>
 
 
 class House {
@@ -21,7 +22,7 @@ private:
     int adultsNumber;
     int childrenNumber;
 
-    std::deque<Person*> persons;
+    std::deque<std::thread> persons;
 
     void createPersons();
 

@@ -10,23 +10,20 @@
 #include <condition_variable>
 #include <atomic>
 
-class SyncingChannel {
+class HouseSetup {
 
 public:
 
     void wait();
     void notifyAllThreads();
+    bool isReady = false;
+    std::atomic<bool> finishedDinner {false};
 
 private:
 
     std::mutex mutexLock;
     std::condition_variable conditionVariable;
 
-};
-
-struct HouseSetup{
-    SyncingChannel syncChannel;
-    std::atomic<bool> finishedDinner {false};
 };
 
 

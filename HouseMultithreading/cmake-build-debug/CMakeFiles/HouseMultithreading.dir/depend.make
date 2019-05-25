@@ -3,41 +3,41 @@
 
 CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: ../Adult.cpp
 CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: ../Adult.h
+CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: ../Person.h
 CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: ../Printing.h
-CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: ../SyncingChannel.h
 
 CMakeFiles/HouseMultithreading.dir/Child.cpp.o: ../Child.cpp
 CMakeFiles/HouseMultithreading.dir/Child.cpp.o: ../Child.h
+CMakeFiles/HouseMultithreading.dir/Child.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/Child.cpp.o: ../Person.h
 CMakeFiles/HouseMultithreading.dir/Child.cpp.o: ../Printing.h
-CMakeFiles/HouseMultithreading.dir/Child.cpp.o: ../SyncingChannel.h
 
 CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../Adult.h
 CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../Child.h
 CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../House.cpp
 CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../House.h
+CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../Person.h
 CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../Printing.h
-CMakeFiles/HouseMultithreading.dir/House.cpp.o: ../SyncingChannel.h
 
+CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o: ../HouseSetup.cpp
+CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o: ../HouseSetup.h
+
+CMakeFiles/HouseMultithreading.dir/Person.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/Person.cpp.o: ../Person.cpp
 CMakeFiles/HouseMultithreading.dir/Person.cpp.o: ../Person.h
 CMakeFiles/HouseMultithreading.dir/Person.cpp.o: ../Printing.h
-CMakeFiles/HouseMultithreading.dir/Person.cpp.o: ../SyncingChannel.h
 
+CMakeFiles/HouseMultithreading.dir/Printing.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/Printing.cpp.o: ../Printing.cpp
 CMakeFiles/HouseMultithreading.dir/Printing.cpp.o: ../Printing.h
-CMakeFiles/HouseMultithreading.dir/Printing.cpp.o: ../SyncingChannel.h
-
-CMakeFiles/HouseMultithreading.dir/SyncingChannel.cpp.o: ../SyncingChannel.cpp
-CMakeFiles/HouseMultithreading.dir/SyncingChannel.cpp.o: ../SyncingChannel.h
 
 CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../Adult.h
 CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../Child.h
 CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../House.h
+CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../Person.h
 CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../Printing.h
-CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../SyncingChannel.h
 CMakeFiles/HouseMultithreading.dir/main.cpp.o: ../main.cpp
 

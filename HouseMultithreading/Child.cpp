@@ -6,12 +6,12 @@
 #include "Child.h"
 
 Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print)
-    :   childThread(&Child::startHouse, this),
-        Person(id, age, houseSetup, print) {}
+    :   houseSetup(houseSetup),
+        Person(id, age, print) {}
 
 void Child::startHouse() {
 
-    houseSetup.syncChannel.wait();
+    houseSetup.wait();
 
     for(int i=0;i<10;i++) {
         std::cout << "Child" << std::endl;
@@ -19,14 +19,4 @@ void Child::startHouse() {
     }
 }
 
-Child::~Child() {
-
-    if(childThread.joinable()){
-        childThread.detach();
-    }else{
-        childThread.join();
-    }
-}
-
-Child::Child(Child &&other) noexcept : Person(std::move(other)), childThread(std::move(other.childThread)) {}
-
+Child::~Child() {}

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/HouseMultithreading.dir/main.cpp.o"
   "CMakeFiles/HouseMultithreading.dir/Printing.cpp.o"
-  "CMakeFiles/HouseMultithreading.dir/SyncingChannel.cpp.o"
+  "CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o"
   "CMakeFiles/HouseMultithreading.dir/House.cpp.o"
   "CMakeFiles/HouseMultithreading.dir/Person.cpp.o"
   "CMakeFiles/HouseMultithreading.dir/Adult.cpp.o"
