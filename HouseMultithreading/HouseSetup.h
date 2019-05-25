@@ -14,14 +14,18 @@ class HouseSetup {
 
 public:
 
-    void wait();
+    void waitForStart();
     void notifyAllThreads();
+    void waitForTV();
+    void notifyTV();
     bool isReady = false;
+    bool isTVReady = false;
     std::atomic<bool> finishedDinner {false};
 
 private:
 
     std::mutex mutexLock;
+    std::mutex TVmutex;
     std::condition_variable conditionVariable;
 
 };

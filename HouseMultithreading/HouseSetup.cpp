@@ -4,7 +4,7 @@
 
 #include "HouseSetup.h"
 
-void HouseSetup::wait() {
+void HouseSetup::waitForStart() {
 
     std::unique_lock<std::mutex> uniqueLock(mutexLock);
 
@@ -18,6 +18,26 @@ void HouseSetup::notifyAllThreads() {
     std::unique_lock<std::mutex> uniqueLock(mutexLock);
 
     isReady = true;
+
+    conditionVariable.notify_all();
+
+}
+
+void HouseSetup::waitForTV() {
+
+    std::unique_lock<std::mutex> uniqueLock(TVmutex);
+
+    conditionVariable.wait(uniqueLock, [this]{
+        return this->isTVReady;
+    });
+
+}
+
+void HouseSetup::notifyTV() {
+
+    std::unique_lock<std::mutex> uniqueLock(mutexLock);
+
+    isTVReady = true;
 
     conditionVariable.notify_all();
 

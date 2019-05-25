@@ -123,60 +123,6 @@ HouseMultithreading/fast:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/build
 .PHONY : HouseMultithreading/fast
 
-Adult.o: Adult.cpp.o
-
-.PHONY : Adult.o
-
-# target to build an object file
-Adult.cpp.o:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Adult.cpp.o
-.PHONY : Adult.cpp.o
-
-Adult.i: Adult.cpp.i
-
-.PHONY : Adult.i
-
-# target to preprocess a source file
-Adult.cpp.i:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Adult.cpp.i
-.PHONY : Adult.cpp.i
-
-Adult.s: Adult.cpp.s
-
-.PHONY : Adult.s
-
-# target to generate assembly for a file
-Adult.cpp.s:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Adult.cpp.s
-.PHONY : Adult.cpp.s
-
-Child.o: Child.cpp.o
-
-.PHONY : Child.o
-
-# target to build an object file
-Child.cpp.o:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Child.cpp.o
-.PHONY : Child.cpp.o
-
-Child.i: Child.cpp.i
-
-.PHONY : Child.i
-
-# target to preprocess a source file
-Child.cpp.i:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Child.cpp.i
-.PHONY : Child.cpp.i
-
-Child.s: Child.cpp.s
-
-.PHONY : Child.s
-
-# target to generate assembly for a file
-Child.cpp.s:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Child.cpp.s
-.PHONY : Child.cpp.s
-
 House.o: House.cpp.o
 
 .PHONY : House.o
@@ -231,33 +177,6 @@ HouseSetup.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.s
 .PHONY : HouseSetup.cpp.s
 
-Person.o: Person.cpp.o
-
-.PHONY : Person.o
-
-# target to build an object file
-Person.cpp.o:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Person.cpp.o
-.PHONY : Person.cpp.o
-
-Person.i: Person.cpp.i
-
-.PHONY : Person.i
-
-# target to preprocess a source file
-Person.cpp.i:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Person.cpp.i
-.PHONY : Person.cpp.i
-
-Person.s: Person.cpp.s
-
-.PHONY : Person.s
-
-# target to generate assembly for a file
-Person.cpp.s:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Person.cpp.s
-.PHONY : Person.cpp.s
-
 Printing.o: Printing.cpp.o
 
 .PHONY : Printing.o
@@ -284,6 +203,141 @@ Printing.s: Printing.cpp.s
 Printing.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Printing.cpp.s
 .PHONY : Printing.cpp.s
+
+Resources/Shower.o: Resources/Shower.cpp.o
+
+.PHONY : Resources/Shower.o
+
+# target to build an object file
+Resources/Shower.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o
+.PHONY : Resources/Shower.cpp.o
+
+Resources/Shower.i: Resources/Shower.cpp.i
+
+.PHONY : Resources/Shower.i
+
+# target to preprocess a source file
+Resources/Shower.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.i
+.PHONY : Resources/Shower.cpp.i
+
+Resources/Shower.s: Resources/Shower.cpp.s
+
+.PHONY : Resources/Shower.s
+
+# target to generate assembly for a file
+Resources/Shower.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.s
+.PHONY : Resources/Shower.cpp.s
+
+Resources/TV.o: Resources/TV.cpp.o
+
+.PHONY : Resources/TV.o
+
+# target to build an object file
+Resources/TV.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o
+.PHONY : Resources/TV.cpp.o
+
+Resources/TV.i: Resources/TV.cpp.i
+
+.PHONY : Resources/TV.i
+
+# target to preprocess a source file
+Resources/TV.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.i
+.PHONY : Resources/TV.cpp.i
+
+Resources/TV.s: Resources/TV.cpp.s
+
+.PHONY : Resources/TV.s
+
+# target to generate assembly for a file
+Resources/TV.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.s
+.PHONY : Resources/TV.cpp.s
+
+Threads/Adult.o: Threads/Adult.cpp.o
+
+.PHONY : Threads/Adult.o
+
+# target to build an object file
+Threads/Adult.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o
+.PHONY : Threads/Adult.cpp.o
+
+Threads/Adult.i: Threads/Adult.cpp.i
+
+.PHONY : Threads/Adult.i
+
+# target to preprocess a source file
+Threads/Adult.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.i
+.PHONY : Threads/Adult.cpp.i
+
+Threads/Adult.s: Threads/Adult.cpp.s
+
+.PHONY : Threads/Adult.s
+
+# target to generate assembly for a file
+Threads/Adult.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.s
+.PHONY : Threads/Adult.cpp.s
+
+Threads/Child.o: Threads/Child.cpp.o
+
+.PHONY : Threads/Child.o
+
+# target to build an object file
+Threads/Child.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o
+.PHONY : Threads/Child.cpp.o
+
+Threads/Child.i: Threads/Child.cpp.i
+
+.PHONY : Threads/Child.i
+
+# target to preprocess a source file
+Threads/Child.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.i
+.PHONY : Threads/Child.cpp.i
+
+Threads/Child.s: Threads/Child.cpp.s
+
+.PHONY : Threads/Child.s
+
+# target to generate assembly for a file
+Threads/Child.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.s
+.PHONY : Threads/Child.cpp.s
+
+Threads/Person.o: Threads/Person.cpp.o
+
+.PHONY : Threads/Person.o
+
+# target to build an object file
+Threads/Person.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o
+.PHONY : Threads/Person.cpp.o
+
+Threads/Person.i: Threads/Person.cpp.i
+
+.PHONY : Threads/Person.i
+
+# target to preprocess a source file
+Threads/Person.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.i
+.PHONY : Threads/Person.cpp.i
+
+Threads/Person.s: Threads/Person.cpp.s
+
+.PHONY : Threads/Person.s
+
+# target to generate assembly for a file
+Threads/Person.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.s
+.PHONY : Threads/Person.cpp.s
 
 main.o: main.cpp.o
 
@@ -321,24 +375,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... HouseMultithreading"
 	@echo "... edit_cache"
-	@echo "... Adult.o"
-	@echo "... Adult.i"
-	@echo "... Adult.s"
-	@echo "... Child.o"
-	@echo "... Child.i"
-	@echo "... Child.s"
 	@echo "... House.o"
 	@echo "... House.i"
 	@echo "... House.s"
 	@echo "... HouseSetup.o"
 	@echo "... HouseSetup.i"
 	@echo "... HouseSetup.s"
-	@echo "... Person.o"
-	@echo "... Person.i"
-	@echo "... Person.s"
 	@echo "... Printing.o"
 	@echo "... Printing.i"
 	@echo "... Printing.s"
+	@echo "... Resources/Shower.o"
+	@echo "... Resources/Shower.i"
+	@echo "... Resources/Shower.s"
+	@echo "... Resources/TV.o"
+	@echo "... Resources/TV.i"
+	@echo "... Resources/TV.s"
+	@echo "... Threads/Adult.o"
+	@echo "... Threads/Adult.i"
+	@echo "... Threads/Adult.s"
+	@echo "... Threads/Child.o"
+	@echo "... Threads/Child.i"
+	@echo "... Threads/Child.s"
+	@echo "... Threads/Person.o"
+	@echo "... Threads/Person.i"
+	@echo "... Threads/Person.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

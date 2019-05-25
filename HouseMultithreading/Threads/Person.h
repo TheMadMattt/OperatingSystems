@@ -6,8 +6,8 @@
 #define HOUSEMULTITHREADING_PERSON_H
 
 
-#include "HouseSetup.h"
-#include "Printing.h"
+#include "../HouseSetup.h"
+#include "../Printing.h"
 
 class Person {
 public:

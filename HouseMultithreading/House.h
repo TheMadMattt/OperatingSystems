@@ -6,7 +6,7 @@
 #define HOUSEMULTITHREADING_HOUSE_H
 
 #include <deque>
-#include "Person.h"
+#include "Threads/Person.h"
 #include <thread>
 
 

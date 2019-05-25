@@ -3,8 +3,8 @@
 //
 
 #include "House.h"
-#include "Child.h"
-#include "Adult.h"
+#include "Threads/Child.h"
+#include "Threads/Adult.h"
 
 House::House(int adultsNumber, int childrenNumber)
     :   adultsNumber(adultsNumber),

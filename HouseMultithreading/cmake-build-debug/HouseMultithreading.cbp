@@ -84,18 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.cpp">
-			<Option target="HouseMultithreading"/>
-		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.h">
-			<Option target="HouseMultithreading"/>
-		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.cpp">
-			<Option target="HouseMultithreading"/>
-		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.h">
-			<Option target="HouseMultithreading"/>
-		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.cpp">
 			<Option target="HouseMultithreading"/>
 		</Unit>
@@ -108,16 +96,40 @@
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.cpp">
-			<Option target="HouseMultithreading"/>
-		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.h">
-			<Option target="HouseMultithreading"/>
-		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.cpp">
 			<Option target="HouseMultithreading"/>
 		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/main.cpp">

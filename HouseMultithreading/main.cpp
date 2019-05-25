@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Person.h"
-#include "Child.h"
-#include "Adult.h"
+#include "Threads/Person.h"
+#include "Threads/Child.h"
+#include "Threads/Adult.h"
 #include "House.h"
 
 int main() {

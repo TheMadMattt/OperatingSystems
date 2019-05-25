@@ -109,44 +109,70 @@ CMakeFiles/HouseMultithreading.dir/House.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/House.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.cpp -o CMakeFiles/HouseMultithreading.dir/House.cpp.s
 
-CMakeFiles/HouseMultithreading.dir/Person.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
-CMakeFiles/HouseMultithreading.dir/Person.cpp.o: ../Person.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HouseMultithreading.dir/Person.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Person.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.cpp
+CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
+CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o: ../Threads/Person.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.cpp
 
-CMakeFiles/HouseMultithreading.dir/Person.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Person.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.cpp > CMakeFiles/HouseMultithreading.dir/Person.cpp.i
+CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.cpp > CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.i
 
-CMakeFiles/HouseMultithreading.dir/Person.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Person.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Person.cpp -o CMakeFiles/HouseMultithreading.dir/Person.cpp.s
+CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.cpp -o CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.s
 
-CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
-CMakeFiles/HouseMultithreading.dir/Adult.cpp.o: ../Adult.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HouseMultithreading.dir/Adult.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Adult.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.cpp
+CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
+CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o: ../Threads/Adult.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.cpp
 
-CMakeFiles/HouseMultithreading.dir/Adult.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Adult.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.cpp > CMakeFiles/HouseMultithreading.dir/Adult.cpp.i
+CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.cpp > CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.i
 
-CMakeFiles/HouseMultithreading.dir/Adult.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Adult.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Adult.cpp -o CMakeFiles/HouseMultithreading.dir/Adult.cpp.s
+CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.cpp -o CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.s
 
-CMakeFiles/HouseMultithreading.dir/Child.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
-CMakeFiles/HouseMultithreading.dir/Child.cpp.o: ../Child.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HouseMultithreading.dir/Child.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Child.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.cpp
+CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
+CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o: ../Threads/Child.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.cpp
 
-CMakeFiles/HouseMultithreading.dir/Child.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Child.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.cpp > CMakeFiles/HouseMultithreading.dir/Child.cpp.i
+CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.cpp > CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.i
 
-CMakeFiles/HouseMultithreading.dir/Child.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Child.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Child.cpp -o CMakeFiles/HouseMultithreading.dir/Child.cpp.s
+CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.cpp -o CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.s
+
+CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
+CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o: ../Resources/TV.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.cpp
+
+CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.cpp > CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.i
+
+CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.cpp -o CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.s
+
+CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: CMakeFiles/HouseMultithreading.dir/flags.make
+CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: ../Resources/Shower.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o -c /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp
+
+CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp > CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.i
+
+CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp -o CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.s
 
 # Object files for target HouseMultithreading
 HouseMultithreading_OBJECTS = \
@@ -154,9 +180,11 @@ HouseMultithreading_OBJECTS = \
 "CMakeFiles/HouseMultithreading.dir/Printing.cpp.o" \
 "CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o" \
 "CMakeFiles/HouseMultithreading.dir/House.cpp.o" \
-"CMakeFiles/HouseMultithreading.dir/Person.cpp.o" \
-"CMakeFiles/HouseMultithreading.dir/Adult.cpp.o" \
-"CMakeFiles/HouseMultithreading.dir/Child.cpp.o"
+"CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o" \
+"CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o" \
+"CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o" \
+"CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o" \
+"CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o"
 
 # External object files for target HouseMultithreading
 HouseMultithreading_EXTERNAL_OBJECTS =
@@ -165,12 +193,14 @@ HouseMultithreading: CMakeFiles/HouseMultithreading.dir/main.cpp.o
 HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Printing.cpp.o
 HouseMultithreading: CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o
 HouseMultithreading: CMakeFiles/HouseMultithreading.dir/House.cpp.o
-HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Person.cpp.o
-HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Adult.cpp.o
-HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Child.cpp.o
+HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o
+HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o
+HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o
+HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o
+HouseMultithreading: CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o
 HouseMultithreading: CMakeFiles/HouseMultithreading.dir/build.make
 HouseMultithreading: CMakeFiles/HouseMultithreading.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable HouseMultithreading"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable HouseMultithreading"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HouseMultithreading.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
