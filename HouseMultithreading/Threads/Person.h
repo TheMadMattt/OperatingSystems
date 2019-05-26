@@ -11,11 +11,13 @@
 
 class Person {
 public:
-    Person(int id, unsigned int age, Printing &print);
+    Person(int id, unsigned int age, Printing &print, HouseSetup &houseSetup);
     Person(Person &&other) noexcept;
     ~Person();
 
     virtual void startHouse() {}
+
+    virtual std::string getPersonStatus(){};
 
     void randomSleep(int min, int max);
 
@@ -23,14 +25,11 @@ public:
 
     virtual void watchingTV() {};
 
-    std::mutex &getPrintingMutex();
-
+    Printing &print;
+    HouseSetup &houseSetup;
 private:
     int id;
     int age;
-    std::mutex printingMutex;
-
-    Printing &print;
 };
 
 

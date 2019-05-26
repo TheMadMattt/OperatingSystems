@@ -14,13 +14,11 @@
 class Printing {
 
 public:
-    explicit Printing(HouseSetup &tableSetup);
+    explicit Printing(HouseSetup &houseSetup);
     ~Printing();
-
 
     void menu();
     void createMenu(std::vector<std::string> personsStatus);
-
     void updateMenu(int personId, std::string status);
 
 private:
@@ -34,7 +32,7 @@ private:
     ITEM **myMenuItems = nullptr;
     MENU* myMenu = nullptr;
 
-    void init();
+    static void init();
 
     void stop();
 

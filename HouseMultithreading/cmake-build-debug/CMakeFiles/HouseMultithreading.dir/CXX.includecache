@@ -34,6 +34,12 @@ condition_variable
 atomic
 -
 
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.cpp
+utility
+-
+Printing.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
+
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
 HouseSetup.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
@@ -53,6 +59,8 @@ TV.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
 ../HouseSetup.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
+../Threads/Person.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 deque
 -
 
@@ -79,6 +87,14 @@ Person.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 ../Resources/TV.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.cpp
+random
+-
+thread
+-
+Person.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 ../HouseSetup.h

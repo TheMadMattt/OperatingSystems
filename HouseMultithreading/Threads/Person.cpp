@@ -6,20 +6,22 @@
 #include <thread>
 #include "Person.h"
 
-Person::Person(int id, unsigned int age, Printing &print)
+Person::Person(int id, unsigned int age, Printing &print, HouseSetup &houseSetup)
     :   id(id),
         age(age),
-        print(print)
+        print(print),
+        houseSetup(houseSetup)
 {}
 
 
 Person::Person(Person &&other) noexcept
     :   id(other.id),
         age(other.age),
-        print(other.print)
+        print(other.print),
+        houseSetup(other.houseSetup)
 {}
 
-Person::~Person() {}
+Person::~Person() = default;
 
 void Person::randomSleep(int min, int max) {
     std::random_device rd;
@@ -34,8 +36,4 @@ void Person::randomSleep(int min, int max) {
 
 int Person::getId() const {
     return id;
-}
-
-std::mutex &Person::getPrintingMutex() {
-    return printingMutex;
 }

@@ -25,8 +25,10 @@ CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: ../Resources/Shower.c
 CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: ../Resources/Shower.h
 
 CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o: ../HouseSetup.h
+CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o: ../Printing.h
 CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o: ../Resources/TV.cpp
 CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o: ../Resources/TV.h
+CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o: ../Threads/Person.h
 
 CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o: ../Printing.h

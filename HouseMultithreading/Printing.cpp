@@ -1,8 +1,8 @@
 #include <utility>
 #include "Printing.h"
 
-Printing::Printing(HouseSetup &tableSetup)
-    :   tableSetup(tableSetup)
+Printing::Printing(HouseSetup &houseSetup)
+    :   tableSetup(houseSetup)
 {
 }
 
@@ -46,8 +46,8 @@ void Printing::menu() {
 void Printing::createMenu(std::vector<std::string> personsStatus) {
 
     init();
-    this-> personsNumber = static_cast<int>(personStatus.size());
-    this->personStatus = std::move(personStatus);
+    this-> personsNumber = personsStatus.size();
+    this->personStatus = std::move(personsStatus);
     myMenuItems = new ITEM*[personsNumber];
 
     for (int i = 0; i < personsNumber; ++i) {

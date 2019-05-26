@@ -6,10 +6,9 @@
 #include "Child.h"
 
 Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv)
-    :   houseSetup(houseSetup),
-        tv(tv),
+    :   tv(tv),
         childStatus(IDLE),
-        Person(id, age, print) {}
+        Person(id, age, print, houseSetup) {}
 
 void Child::startHouse() {
 
@@ -20,7 +19,7 @@ void Child::startHouse() {
 
 Child::~Child() {}
 
-std::string Child::getChildStatus(){
+std::string Child::getPersonStatus(){
 
     std::string message = "Child " + std::to_string(getId());
 
@@ -47,15 +46,18 @@ std::string Child::getChildStatus(){
 
 void Child::setChildStatus(ChildStatus _childStatus) {
     this->childStatus = _childStatus;
+
+    print.updateMenu(getId(),getPersonStatus());
+
 }
 
 void Child::watchingTV() {
 
     tv.useTV(getId());
-    setChildStatus(ChildStatus ::WATCHING);
-    std::cout << getChildStatus() << std::endl;
+    setChildStatus(ChildStatus::WATCHING);
+    //std::cout << getPersonStatus() << std::endl;
     Person::randomSleep(1,4);
     tv.releaseTV(getId());
     setChildStatus(ChildStatus ::STOPPED_WATCHING);
-    std::cout << getChildStatus() << std::endl;
+    //std::cout << getPersonStatus() << std::endl;
 }

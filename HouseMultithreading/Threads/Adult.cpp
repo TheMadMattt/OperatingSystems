@@ -6,10 +6,9 @@
 #include "Adult.h"
 
 Adult::Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv)
-    :   houseSetup(houseSetup),
-        tv(tv),
+    :   tv(tv),
         adultStatus(IDLE),
-        Person(id, age, print) {}
+        Person(id, age, print, houseSetup) {}
 
 void Adult::startHouse() {
 
@@ -22,7 +21,7 @@ Adult::~Adult() {
 
 }
 
-std::string Adult::getAdultStatus(){
+std::string Adult::getPersonStatus(){
     std::string message = "Adult " + std::to_string(getId());
 
     switch (adultStatus){
@@ -33,7 +32,7 @@ std::string Adult::getAdultStatus(){
             message += " is showering";
             break;
         case IDLE:
-            message += "is waiting";
+            message += " is waiting";
             break;
         case STOPPED_WATCHING:
             message += " stopped watching TV";
@@ -45,16 +44,18 @@ std::string Adult::getAdultStatus(){
 
 void Adult::setAdultStatus(AdultStatus _adultStatus) {
     this->adultStatus = _adultStatus;
+
+    print.updateMenu(getId(),getPersonStatus());
 }
 
 void Adult::watchingTV() {
 
     tv.useTV(getId());
     setAdultStatus(AdultStatus::WATCHING);
-    std::cout << getAdultStatus() << std::endl;
+    //std::cout << getPersonStatus() << std::endl;
     Person::randomSleep(1,4);
     tv.releaseTV(getId());
     setAdultStatus(AdultStatus::STOPPED_WATCHING);
-    std::cout << getAdultStatus() << std::endl;
+    //std::cout << getPersonStatus() << std::endl;
 }
 

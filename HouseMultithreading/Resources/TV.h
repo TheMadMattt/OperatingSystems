@@ -6,9 +6,10 @@
 #define HOUSEMULTITHREADING_TELEWIZOR_H
 
 #include "../HouseSetup.h"
+#include "../Threads/Person.h"
 #include <deque>
 
-#define personsCounter 1
+#define personsCounter 2
 
 class TV {
 public:

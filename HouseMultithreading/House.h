@@ -18,6 +18,8 @@ public:
 
     void start();
 
+    std::vector<std::string> getPersonsStatus();
+
     HouseSetup houseSetup;
     Printing print;
     TV tv;
@@ -25,7 +27,8 @@ private:
     int adultsNumber;
     int childrenNumber;
 
-    std::deque<std::thread> persons;
+    std::deque<std::thread> personsThread;
+    std::deque<Person*> persons;
 
     void createPersons();
 

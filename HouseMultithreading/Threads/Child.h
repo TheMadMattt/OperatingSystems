@@ -20,7 +20,7 @@ public:
 
     void startHouse() override;
 
-    std::string getChildStatus();
+    std::string getPersonStatus() override;
 
     void setChildStatus(ChildStatus _childStatus);
 
@@ -28,7 +28,6 @@ public:
 
 private:
     ChildStatus childStatus;
-    HouseSetup &houseSetup;
     TV &tv;
 };
 
