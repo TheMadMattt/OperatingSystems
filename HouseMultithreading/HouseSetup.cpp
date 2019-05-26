@@ -22,23 +22,3 @@ void HouseSetup::notifyAllThreads() {
     conditionVariable.notify_all();
 
 }
-
-void HouseSetup::waitForTV() {
-
-    std::unique_lock<std::mutex> uniqueLock(TVmutex);
-
-    conditionVariable.wait(uniqueLock, [this]{
-        return this->isTVReady;
-    });
-
-}
-
-void HouseSetup::notifyTV() {
-
-    std::unique_lock<std::mutex> uniqueLock(mutexLock);
-
-    isTVReady = true;
-
-    conditionVariable.notify_all();
-
-}

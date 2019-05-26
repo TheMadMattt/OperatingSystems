@@ -28,6 +28,14 @@ void Person::randomSleep(int min, int max) {
 
     int randSleepTime = generator(mt);
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(randSleepTime));
+    std::this_thread::sleep_for(std::chrono::seconds(randSleepTime));
 
+}
+
+int Person::getId() const {
+    return id;
+}
+
+std::mutex &Person::getPrintingMutex() {
+    return printingMutex;
 }

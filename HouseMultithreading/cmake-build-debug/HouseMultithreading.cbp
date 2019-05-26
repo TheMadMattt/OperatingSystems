@@ -102,6 +102,12 @@
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp">
 			<Option target="HouseMultithreading"/>
 		</Unit>

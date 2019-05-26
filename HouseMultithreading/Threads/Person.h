@@ -19,9 +19,16 @@ public:
 
     void randomSleep(int min, int max);
 
+    int getId() const;
+
+    virtual void watchingTV() {};
+
+    std::mutex &getPrintingMutex();
+
 private:
     int id;
     int age;
+    std::mutex printingMutex;
 
     Printing &print;
 };

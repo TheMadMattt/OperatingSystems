@@ -19,18 +19,15 @@ public:
 
 
     void menu();
-    void createMenu(std::vector<std::string> philosophersCycles, std::vector<std::string> philosophersStatus,
-            std::vector<std::string> philoForks);
+    void createMenu(std::vector<std::string> personsStatus);
 
-    void updateMenu(int philosopherId, std::string status, std::string cycle);
+    void updateMenu(int personId, std::string status);
 
 private:
 
     std::mutex menuMutex;
-    std::vector<std::string> philosophersStatus;
-    std::vector<std::string> philosophersCycles;
-    std::vector<std::string> philoForksStatus;
-    int philosophersNumber;
+    std::vector<std::string> personStatus;
+    int personsNumber;
 
     HouseSetup &tableSetup;
 

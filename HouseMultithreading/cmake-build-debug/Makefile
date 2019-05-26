@@ -204,6 +204,33 @@ Printing.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Printing.cpp.s
 .PHONY : Printing.cpp.s
 
+Resources/HouseStuff.o: Resources/HouseStuff.cpp.o
+
+.PHONY : Resources/HouseStuff.o
+
+# target to build an object file
+Resources/HouseStuff.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.o
+.PHONY : Resources/HouseStuff.cpp.o
+
+Resources/HouseStuff.i: Resources/HouseStuff.cpp.i
+
+.PHONY : Resources/HouseStuff.i
+
+# target to preprocess a source file
+Resources/HouseStuff.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.i
+.PHONY : Resources/HouseStuff.cpp.i
+
+Resources/HouseStuff.s: Resources/HouseStuff.cpp.s
+
+.PHONY : Resources/HouseStuff.s
+
+# target to generate assembly for a file
+Resources/HouseStuff.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.s
+.PHONY : Resources/HouseStuff.cpp.s
+
 Resources/Shower.o: Resources/Shower.cpp.o
 
 .PHONY : Resources/Shower.o
@@ -384,6 +411,9 @@ help:
 	@echo "... Printing.o"
 	@echo "... Printing.i"
 	@echo "... Printing.s"
+	@echo "... Resources/HouseStuff.o"
+	@echo "... Resources/HouseStuff.i"
+	@echo "... Resources/HouseStuff.s"
 	@echo "... Resources/Shower.o"
 	@echo "... Resources/Shower.i"
 	@echo "... Resources/Shower.s"

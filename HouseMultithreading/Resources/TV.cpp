@@ -4,21 +4,23 @@
 
 #include "TV.h"
 
-TV::TV(int id, HouseSetup &houseSetup)
-    :   id(id),
-        houseSetup(houseSetup)
+TV::TV(int id)
+    :   id(id)
 {}
 
 void TV::useTV(int personId) {
 
-    if(placeCounter == personsCounter){
-        houseSetup.waitForTV();
-    }else{
-        std::scoped_lock<std::mutex> scopedLock(mutexTV);
+    std::scoped_lock<std::mutex> scopedLock(mutexTV);
+    while(!isTVReady) {
+        waitForTV();
+    }
+    if(placeCounter!=personsCounter){
         this->persons.push_back(personId);
         ++placeCounter;
+        if(placeCounter == personsCounter){
+            isTVReady = false;
+        }
     }
-
 }
 
 void TV::releaseTV(int personId) {
@@ -30,6 +32,26 @@ void TV::releaseTV(int personId) {
     }
     --placeCounter;
 
-    houseSetup.notifyTV();
+    notifyThreads();
+}
+
+void TV::waitForTV() {
+
+    std::unique_lock<std::mutex> uniqueLock(waitMutex);
+
+    isTVReady = false;
+
+    tvVariable.wait(uniqueLock, [this]{
+        return this->isTVReady;
+    });
+}
+
+void TV::notifyThreads() {
+
+    std::unique_lock<std::mutex> uniqueLock(waitMutex);
+
+    isTVReady = true;
+
+    tvVariable.notify_one();
 
 }

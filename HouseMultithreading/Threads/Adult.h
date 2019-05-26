@@ -7,18 +7,31 @@
 
 
 #include "Person.h"
+#include "../Resources/TV.h"
 
 class Adult: public Person {
 
 public:
-    Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print);
+    Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv);
 
     ~Adult();
 
+    enum AdultStatus{
+        IDLE, WATCHING, STOPPED_WATCHING, SHOWERING
+    };
+
     void startHouse() override;
 
+    std::string getAdultStatus();
+
+    void setAdultStatus(AdultStatus _adultStatus);
+
+    void watchingTV() override;
+
 private:
+    AdultStatus adultStatus;
     HouseSetup &houseSetup;
+    TV &tv;
 };
 
 

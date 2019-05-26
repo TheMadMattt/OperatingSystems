@@ -7,6 +7,8 @@
 
 #include <deque>
 #include "Threads/Person.h"
+#include "Resources/HouseStuff.h"
+#include "Resources/TV.h"
 #include <thread>
 
 
@@ -18,6 +20,7 @@ public:
 
     HouseSetup houseSetup;
     Printing print;
+    TV tv;
 private:
     int adultsNumber;
     int childrenNumber;

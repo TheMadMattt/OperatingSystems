@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o"
   "CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o"
   "CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o"
+  "CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.o"
   "HouseMultithreading.pdb"
   "HouseMultithreading"
 )

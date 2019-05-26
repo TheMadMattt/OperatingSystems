@@ -5,18 +5,57 @@
 #include <iostream>
 #include "Child.h"
 
-Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print)
+Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv)
     :   houseSetup(houseSetup),
+        tv(tv),
+        childStatus(IDLE),
         Person(id, age, print) {}
 
 void Child::startHouse() {
 
     houseSetup.waitForStart();
 
-    for(int i=0;i<10;i++) {
-        std::cout << "Child" << std::endl;
-        Person::randomSleep(100,200);
-    }
+    watchingTV();
 }
 
 Child::~Child() {}
+
+std::string Child::getChildStatus(){
+
+    std::string message = "Child " + std::to_string(getId());
+
+    switch (childStatus){
+        case WATCHING:
+            message += " is watching TV";
+            break;
+        case SHOWERING:
+            message += " is showering";
+            break;
+        case PLAYING:
+            message += " is playing game";
+            break;
+        case IDLE:
+            message += " is waiting";
+            break;
+        case STOPPED_WATCHING:
+            message += " stopped watching TV";
+            break;
+    }
+
+    return message;
+}
+
+void Child::setChildStatus(ChildStatus _childStatus) {
+    this->childStatus = _childStatus;
+}
+
+void Child::watchingTV() {
+
+    tv.useTV(getId());
+    setChildStatus(ChildStatus ::WATCHING);
+    std::cout << getChildStatus() << std::endl;
+    Person::randomSleep(1,4);
+    tv.releaseTV(getId());
+    setChildStatus(ChildStatus ::STOPPED_WATCHING);
+    std::cout << getChildStatus() << std::endl;
+}

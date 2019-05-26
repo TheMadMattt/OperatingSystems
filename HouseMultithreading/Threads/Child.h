@@ -7,17 +7,29 @@
 
 
 #include "Person.h"
+#include "../Resources/TV.h"
 
 class Child: public Person {
 public:
-    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print);
+    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv);
     ~Child();
+
+    enum ChildStatus{
+        IDLE, WATCHING, STOPPED_WATCHING, SHOWERING, PLAYING
+    };
 
     void startHouse() override;
 
-private:
+    std::string getChildStatus();
 
+    void setChildStatus(ChildStatus _childStatus);
+
+    void watchingTV() override;
+
+private:
+    ChildStatus childStatus;
     HouseSetup &houseSetup;
+    TV &tv;
 };
 
 

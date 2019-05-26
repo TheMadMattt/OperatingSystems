@@ -43,28 +43,21 @@ void Printing::menu() {
     }
 }
 
-void Printing::createMenu(std::vector<std::string> philosophersCycles, std::vector<std::string> philosophersStatus,
-                          std::vector<std::string> philoForks) {
+void Printing::createMenu(std::vector<std::string> personsStatus) {
 
     init();
-    this-> philosophersNumber = static_cast<int>(philosophersStatus.size());
-    this->philoForksStatus = std::move(philoForks);
-    this->philosophersStatus = std::move(philosophersStatus);
-    this->philosophersCycles = std::move(philosophersCycles);
-    myMenuItems = new ITEM*[philosophersNumber];
+    this-> personsNumber = static_cast<int>(personStatus.size());
+    this->personStatus = std::move(personStatus);
+    myMenuItems = new ITEM*[personsNumber];
 
-    for (int i = 0; i < philosophersNumber; ++i) {
-        myMenuItems[i] = new_item(this->philosophersCycles[i].c_str(), this->philosophersStatus[i].c_str());
+    for (int i = 0; i < personsNumber; ++i) {
+        myMenuItems[i] = new_item(this->personStatus[i].c_str(), nullptr);
     }
 
     myMenu = new_menu(myMenuItems);
     set_menu_mark(myMenu, " ");
     refresh();
     post_menu(myMenu);
-
-    for (int i = 0; i < philosophersNumber; ++i) {
-        mvprintw(LINES - 10 + i, 0, philoForksStatus[i].c_str());
-    }
 
     mvprintw(LINES - 2, 0, "ESC to stop threads");
     refresh();
@@ -86,7 +79,7 @@ void Printing::closeMenu() {
 
     unpost_menu(myMenu);
     free_menu(myMenu);
-    for (int i = 0; i < philosophersStatus.size(); ++i) {
+    for (int i = 0; i < personStatus.size(); ++i) {
         free_item(myMenuItems[i]);
     }
 
@@ -94,23 +87,17 @@ void Printing::closeMenu() {
 
 }
 
-void Printing::updateMenu(int philosopherId, std::string status, std::string cycle) {
+void Printing::updateMenu(int personId, std::string status) {
 
     std::lock_guard<std::mutex> lockGuard(menuMutex);
-    philosophersStatus[philosopherId] = std::move(status);
-    philosophersCycles[philosopherId] = std::move(cycle);
-    myMenuItems[philosopherId] = new_item(philosophersCycles[philosopherId].c_str(),
-            this->philosophersStatus[philosopherId].c_str());
+    personStatus[personId] = std::move(status);
+    myMenuItems[personId] = new_item(this->personStatus[personId].c_str(), nullptr);
 
     auto currentMenuItem = myMenu->curitem;
     unpost_menu(myMenu);
     set_menu_items(myMenu,myMenuItems);
     set_current_item(myMenu,currentMenuItem);
     post_menu(myMenu);
-
-    for (int i = 0; i < philosophersNumber; ++i) {
-        mvprintw(LINES - 10 + i, 0, philoForksStatus[i].c_str());
-    }
 
     mvprintw(LINES - 2, 0, "ESC to stop threads");
     refresh();

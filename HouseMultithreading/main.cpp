@@ -6,7 +6,7 @@
 
 int main() {
 
-    House house = House(1,1);
+    House house = House(10,10);
 
     house.start();
 

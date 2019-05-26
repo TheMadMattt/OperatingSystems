@@ -8,27 +8,29 @@
 #include "../HouseSetup.h"
 #include <deque>
 
-#define personsCounter 3
-
-enum ForkStatus{
-    IN_USE, AVAILABLE
-};
+#define personsCounter 1
 
 class TV {
-
-    TV(int id, HouseSetup &houseSetup);
+public:
+    TV(int id);
 
     void useTV(int personId);
     void releaseTV(int personId);
 
 private:
-    int id;
+    int id = 0;
     std::deque<int> persons;
-    HouseSetup &houseSetup;
+
+    std::condition_variable tvVariable;
+    bool isTVReady = true;
 
     std::mutex mutexTV;
+    std::mutex waitMutex;
 
     int placeCounter = 0;
+
+    void waitForTV();
+    void notifyThreads();
 
 };
 
