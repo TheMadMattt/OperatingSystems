@@ -24,6 +24,7 @@ public:
     int getId() const;
 
     virtual void watchingTV() {};
+    virtual void showering() {};
 
     Printing &print;
     HouseSetup &houseSetup;

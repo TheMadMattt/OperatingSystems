@@ -5,19 +5,25 @@
 #include <iostream>
 #include "Child.h"
 
-Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv)
+Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv, Shower &shower)
     :   tv(tv),
+        shower(shower),
         childStatus(IDLE),
         Person(id, age, print, houseSetup) {}
+
+Child::~Child() {}
 
 void Child::startHouse() {
 
     houseSetup.waitForStart();
 
-    watchingTV();
-}
+    do {
+        watchingTV();
+        showering();
+    }while(!houseSetup.finishedHouse);
 
-Child::~Child() {}
+
+}
 
 std::string Child::getPersonStatus(){
 
@@ -53,11 +59,19 @@ void Child::setChildStatus(ChildStatus _childStatus) {
 
 void Child::watchingTV() {
 
+    tv.waitForTV();
     tv.useTV(getId());
     setChildStatus(ChildStatus::WATCHING);
-    //std::cout << getPersonStatus() << std::endl;
     Person::randomSleep(1,4);
     tv.releaseTV(getId());
     setChildStatus(ChildStatus ::STOPPED_WATCHING);
-    //std::cout << getPersonStatus() << std::endl;
+}
+
+void Child::showering() {
+
+    shower.takeShower(getId());
+    setChildStatus(SHOWERING);
+    Person::randomSleep(1,4);
+    shower.releaseShower();
+    setChildStatus(IDLE);
 }

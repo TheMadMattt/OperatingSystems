@@ -72,7 +72,7 @@ void Printing::init() {
 }
 
 void Printing::stop() {
-    tableSetup.finishedDinner = true;
+    tableSetup.finishedHouse = true;
 }
 
 void Printing::closeMenu() {

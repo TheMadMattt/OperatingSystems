@@ -17,21 +17,20 @@ public:
 
     void useTV(int personId);
     void releaseTV(int personId);
+    void waitForTV();
+    void notifyThreads();
 
 private:
     int id = 0;
     std::deque<int> persons;
 
     std::condition_variable tvVariable;
-    bool isTVReady = true;
+    bool isTVReady;
 
     std::mutex mutexTV;
     std::mutex waitMutex;
 
     int placeCounter = 0;
-
-    void waitForTV();
-    void notifyThreads();
 
 };
 

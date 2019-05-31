@@ -5,18 +5,16 @@
 #include "TV.h"
 
 TV::TV(int id)
-    :   id(id)
+    :   id(id),
+        isTVReady(true)
 {}
 
 void TV::useTV(int personId) {
 
     std::scoped_lock<std::mutex> scopedLock(mutexTV);
-    while(!isTVReady) {
-        waitForTV();
-    }
     if(placeCounter!=personsCounter){
-        this->persons.push_back(personId);
         ++placeCounter;
+        this->persons.push_back(personId);
         if(placeCounter == personsCounter){
             isTVReady = false;
         }
@@ -39,11 +37,13 @@ void TV::waitForTV() {
 
     std::unique_lock<std::mutex> uniqueLock(waitMutex);
 
-    isTVReady = false;
+    if(personsCounter==placeCounter) {
+        isTVReady = false;
 
-    tvVariable.wait(uniqueLock, [this]{
-        return this->isTVReady;
-    });
+        tvVariable.wait(uniqueLock, [this] {
+            return this->isTVReady;
+        });
+    }
 }
 
 void TV::notifyThreads() {

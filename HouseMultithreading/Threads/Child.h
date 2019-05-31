@@ -8,10 +8,11 @@
 
 #include "Person.h"
 #include "../Resources/TV.h"
+#include "../Resources/Shower.h"
 
 class Child: public Person {
 public:
-    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv);
+    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv, Shower &shower);
     ~Child();
 
     enum ChildStatus{
@@ -26,9 +27,12 @@ public:
 
     void watchingTV() override;
 
+    void showering() override;
+
 private:
     ChildStatus childStatus;
     TV &tv;
+    Shower &shower;
 };
 
 

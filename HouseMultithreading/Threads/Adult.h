@@ -8,11 +8,12 @@
 
 #include "Person.h"
 #include "../Resources/TV.h"
+#include "../Resources/Shower.h"
 
 class Adult: public Person {
 
 public:
-    Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv);
+    Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv, Shower &shower);
 
     ~Adult();
 
@@ -28,9 +29,12 @@ public:
 
     void watchingTV() override;
 
+    void showering() override;
+
 private:
     AdultStatus adultStatus;
     TV &tv;
+    Shower &shower;
 };
 
 

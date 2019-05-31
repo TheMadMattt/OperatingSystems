@@ -17,7 +17,7 @@ public:
     void waitForStart();
     void notifyAllThreads();
     bool isReady = false;
-    std::atomic<bool> finishedDinner {false};
+    std::atomic<bool> finishedHouse {false};
 
 private:
     std::mutex mutexLock;

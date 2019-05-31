@@ -9,6 +9,7 @@
 #include "Threads/Person.h"
 #include "Resources/HouseStuff.h"
 #include "Resources/TV.h"
+#include "Resources/Shower.h"
 #include <thread>
 
 
@@ -23,6 +24,7 @@ public:
     HouseSetup houseSetup;
     Printing print;
     TV tv;
+    Shower shower;
 private:
     int adultsNumber;
     int childrenNumber;
