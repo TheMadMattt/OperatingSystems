@@ -9,10 +9,11 @@
 #include "Person.h"
 #include "../Resources/TV.h"
 #include "../Resources/Shower.h"
+#include "../HouseStuff.h"
 
 class Child: public Person {
 public:
-    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv, Shower &shower);
+    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff);
     ~Child();
 
     enum ChildStatus{
@@ -31,8 +32,7 @@ public:
 
 private:
     ChildStatus childStatus;
-    TV &tv;
-    Shower &shower;
+    HouseStuff &houseStuff;
 };
 
 

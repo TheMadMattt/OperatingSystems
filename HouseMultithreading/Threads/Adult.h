@@ -9,11 +9,12 @@
 #include "Person.h"
 #include "../Resources/TV.h"
 #include "../Resources/Shower.h"
+#include "../HouseStuff.h"
 
 class Adult: public Person {
 
 public:
-    Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv, Shower &shower);
+    Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff);
 
     ~Adult();
 
@@ -33,8 +34,7 @@ public:
 
 private:
     AdultStatus adultStatus;
-    TV &tv;
-    Shower &shower;
+    HouseStuff &houseStuff;
 };
 
 

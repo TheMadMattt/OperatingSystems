@@ -5,9 +5,8 @@
 #include <iostream>
 #include "Child.h"
 
-Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv, Shower &shower)
-    :   tv(tv),
-        shower(shower),
+Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff)
+    :   houseStuff(houseStuff),
         childStatus(IDLE),
         Person(id, age, print, houseSetup) {}
 
@@ -56,19 +55,18 @@ void Child::setChildStatus(ChildStatus _childStatus) {
 
 void Child::watchingTV() {
 
-    tv.waitForTV();
-    tv.useTV(getId());
+    houseStuff.tv.useTV(getId());
     setChildStatus(WATCHING);
     Person::randomSleep(1,4);
-    tv.releaseTV(getId());
+    houseStuff.tv.releaseTV(getId());
     setChildStatus(IDLE);
 }
 
 void Child::showering() {
 
-    shower.takeShower(getId());
+    houseStuff.shower.takeShower(getId());
     setChildStatus(SHOWERING);
     Person::randomSleep(1,4);
-    shower.releaseShower();
+    houseStuff.shower.releaseShower();
     setChildStatus(IDLE);
 }

@@ -6,8 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/House.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o"
+  "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/HouseStuff.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/Printing.cpp.o"
-  "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.o"
+  "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Console.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/Resources/Console.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o"
   "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.cpp" "/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/cmake-build-debug/CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o"

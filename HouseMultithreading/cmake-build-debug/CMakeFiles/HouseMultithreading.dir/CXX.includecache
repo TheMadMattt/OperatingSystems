@@ -19,12 +19,12 @@ deque
 -
 Threads/Person.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
-Resources/HouseStuff.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.h
 Resources/TV.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
 Resources/Shower.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
+HouseStuff.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
 thread
 -
 
@@ -36,6 +36,16 @@ condition_variable
 atomic
 -
 
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.cpp
+HouseStuff.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
+
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
+Resources/Shower.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
+Resources/TV.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
+
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
 HouseSetup.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
@@ -45,8 +55,6 @@ menu.h
 -
 vector
 -
-
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.h
 
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
 condition_variable
@@ -77,6 +85,8 @@ Person.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
 ../Resources/Shower.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
+../HouseStuff.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
 
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.cpp
 iostream
@@ -91,6 +101,8 @@ Person.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
 ../Resources/Shower.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
+../HouseStuff.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
 
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 ../HouseSetup.h

@@ -5,8 +5,8 @@ CMakeFiles/HouseMultithreading.dir/House.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.cpp
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
- /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.h
@@ -15,13 +15,21 @@ CMakeFiles/HouseMultithreading.dir/House.cpp.o
 CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.cpp
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
+CMakeFiles/HouseMultithreading.dir/HouseStuff.cpp.o
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.cpp
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 CMakeFiles/HouseMultithreading.dir/Printing.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.cpp
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
-CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.o
- /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.cpp
- /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.h
+CMakeFiles/HouseMultithreading.dir/Resources/Console.cpp.o
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Console.cpp
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Console.h
 CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
@@ -33,6 +41,7 @@ CMakeFiles/HouseMultithreading.dir/Resources/TV.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
@@ -41,6 +50,7 @@ CMakeFiles/HouseMultithreading.dir/Threads/Adult.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 CMakeFiles/HouseMultithreading.dir/Threads/Child.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
@@ -55,8 +65,8 @@ CMakeFiles/HouseMultithreading.dir/Threads/Person.cpp.o
 CMakeFiles/HouseMultithreading.dir/main.cpp.o
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
+ /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
- /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
  /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.h

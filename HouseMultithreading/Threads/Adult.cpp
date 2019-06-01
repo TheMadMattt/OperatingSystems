@@ -5,9 +5,8 @@
 #include <iostream>
 #include "Adult.h"
 
-Adult::Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, TV &tv, Shower &shower)
-    :   tv(tv),
-        shower(shower),
+Adult::Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff)
+    :   houseStuff(houseStuff),
         adultStatus(IDLE),
         Person(id, age, print, houseSetup) {}
 
@@ -51,20 +50,19 @@ void Adult::setAdultStatus(AdultStatus _adultStatus) {
 
 void Adult::watchingTV() {
 
-    tv.waitForTV();
-    tv.useTV(getId());
+    houseStuff.tv.useTV(getId());
     setAdultStatus(WATCHING);
     Person::randomSleep(1,4);
-    tv.releaseTV(getId());
+    houseStuff.tv.releaseTV(getId());
     setAdultStatus(IDLE);
 }
 
 void Adult::showering() {
 
-    shower.takeShower(getId());
+    houseStuff.shower.takeShower(getId());
     setAdultStatus(SHOWERING);
     Person::randomSleep(1,4);
-    shower.releaseShower();
+    houseStuff.shower.releaseShower();
     setAdultStatus(IDLE);
 }
 

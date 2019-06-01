@@ -96,16 +96,22 @@
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.cpp">
 			<Option target="HouseMultithreading"/>
 		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.cpp">
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Console.cpp">
 			<Option target="HouseMultithreading"/>
 		</Unit>
-		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/HouseStuff.h">
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Console.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.cpp">

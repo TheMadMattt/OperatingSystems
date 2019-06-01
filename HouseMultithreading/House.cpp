@@ -9,8 +9,7 @@
 House::House(int adultsNumber, int childrenNumber)
     :   adultsNumber(adultsNumber),
         childrenNumber(childrenNumber),
-        tv(0),
-        shower(0),
+        houseStuff(),
         print(std::ref(houseSetup))
 {
     createPersons();
@@ -20,13 +19,13 @@ House::House(int adultsNumber, int childrenNumber)
 void House::createPersons() {
 
     for (int i = 0; i < adultsNumber; ++i) {
-        auto *adult = new Adult(i,35,std::ref(houseSetup),std::ref(print), std::ref(tv), std::ref(shower));
+        auto *adult = new Adult(i,35,std::ref(houseSetup),std::ref(print), std::ref(houseStuff));
         persons.emplace_back(adult);
         personsThread.emplace_back(std::thread(&Adult::startHouse, adult));
     }
 
     for (int j = 0; j < childrenNumber; ++j) {
-        auto *child = new Child(j+adultsNumber,16,std::ref(houseSetup),std::ref(print), std::ref(tv), std::ref(shower));
+        auto *child = new Child(j+adultsNumber,16,std::ref(houseSetup),std::ref(print), std::ref(houseStuff));
         persons.emplace_back(child);
         personsThread.emplace_back(std::thread(&Child::startHouse, child));
     }

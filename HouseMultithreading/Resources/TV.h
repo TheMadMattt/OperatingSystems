@@ -17,7 +17,6 @@ public:
 
     void useTV(int personId);
     void releaseTV(int personId);
-    void waitForTV();
 
 private:
     int id = 0;
@@ -32,7 +31,7 @@ private:
     int placeCounter = 0;
 
     void notifyThreads();
-
+    void waitForTV();
 };
 
 

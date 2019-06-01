@@ -177,6 +177,33 @@ HouseSetup.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseSetup.cpp.s
 .PHONY : HouseSetup.cpp.s
 
+HouseStuff.o: HouseStuff.cpp.o
+
+.PHONY : HouseStuff.o
+
+# target to build an object file
+HouseStuff.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseStuff.cpp.o
+.PHONY : HouseStuff.cpp.o
+
+HouseStuff.i: HouseStuff.cpp.i
+
+.PHONY : HouseStuff.i
+
+# target to preprocess a source file
+HouseStuff.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseStuff.cpp.i
+.PHONY : HouseStuff.cpp.i
+
+HouseStuff.s: HouseStuff.cpp.s
+
+.PHONY : HouseStuff.s
+
+# target to generate assembly for a file
+HouseStuff.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/HouseStuff.cpp.s
+.PHONY : HouseStuff.cpp.s
+
 Printing.o: Printing.cpp.o
 
 .PHONY : Printing.o
@@ -204,32 +231,32 @@ Printing.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Printing.cpp.s
 .PHONY : Printing.cpp.s
 
-Resources/HouseStuff.o: Resources/HouseStuff.cpp.o
+Resources/Console.o: Resources/Console.cpp.o
 
-.PHONY : Resources/HouseStuff.o
+.PHONY : Resources/Console.o
 
 # target to build an object file
-Resources/HouseStuff.cpp.o:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.o
-.PHONY : Resources/HouseStuff.cpp.o
+Resources/Console.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Console.cpp.o
+.PHONY : Resources/Console.cpp.o
 
-Resources/HouseStuff.i: Resources/HouseStuff.cpp.i
+Resources/Console.i: Resources/Console.cpp.i
 
-.PHONY : Resources/HouseStuff.i
+.PHONY : Resources/Console.i
 
 # target to preprocess a source file
-Resources/HouseStuff.cpp.i:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.i
-.PHONY : Resources/HouseStuff.cpp.i
+Resources/Console.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Console.cpp.i
+.PHONY : Resources/Console.cpp.i
 
-Resources/HouseStuff.s: Resources/HouseStuff.cpp.s
+Resources/Console.s: Resources/Console.cpp.s
 
-.PHONY : Resources/HouseStuff.s
+.PHONY : Resources/Console.s
 
 # target to generate assembly for a file
-Resources/HouseStuff.cpp.s:
-	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/HouseStuff.cpp.s
-.PHONY : Resources/HouseStuff.cpp.s
+Resources/Console.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Console.cpp.s
+.PHONY : Resources/Console.cpp.s
 
 Resources/Shower.o: Resources/Shower.cpp.o
 
@@ -408,12 +435,15 @@ help:
 	@echo "... HouseSetup.o"
 	@echo "... HouseSetup.i"
 	@echo "... HouseSetup.s"
+	@echo "... HouseStuff.o"
+	@echo "... HouseStuff.i"
+	@echo "... HouseStuff.s"
 	@echo "... Printing.o"
 	@echo "... Printing.i"
 	@echo "... Printing.s"
-	@echo "... Resources/HouseStuff.o"
-	@echo "... Resources/HouseStuff.i"
-	@echo "... Resources/HouseStuff.s"
+	@echo "... Resources/Console.o"
+	@echo "... Resources/Console.i"
+	@echo "... Resources/Console.s"
 	@echo "... Resources/Shower.o"
 	@echo "... Resources/Shower.i"
 	@echo "... Resources/Shower.s"
