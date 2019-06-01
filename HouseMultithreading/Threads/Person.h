@@ -25,6 +25,7 @@ public:
 
     virtual void watchingTV() {};
     virtual void showering() {};
+    virtual void eating() {};
 
     Printing &print;
     HouseSetup &houseSetup;

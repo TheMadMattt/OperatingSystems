@@ -231,6 +231,33 @@ Printing.cpp.s:
 	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Printing.cpp.s
 .PHONY : Printing.cpp.s
 
+Resources/Chair.o: Resources/Chair.cpp.o
+
+.PHONY : Resources/Chair.o
+
+# target to build an object file
+Resources/Chair.cpp.o:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Chair.cpp.o
+.PHONY : Resources/Chair.cpp.o
+
+Resources/Chair.i: Resources/Chair.cpp.i
+
+.PHONY : Resources/Chair.i
+
+# target to preprocess a source file
+Resources/Chair.cpp.i:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Chair.cpp.i
+.PHONY : Resources/Chair.cpp.i
+
+Resources/Chair.s: Resources/Chair.cpp.s
+
+.PHONY : Resources/Chair.s
+
+# target to generate assembly for a file
+Resources/Chair.cpp.s:
+	$(MAKE) -f CMakeFiles/HouseMultithreading.dir/build.make CMakeFiles/HouseMultithreading.dir/Resources/Chair.cpp.s
+.PHONY : Resources/Chair.cpp.s
+
 Resources/Console.o: Resources/Console.cpp.o
 
 .PHONY : Resources/Console.o
@@ -441,6 +468,9 @@ help:
 	@echo "... Printing.o"
 	@echo "... Printing.i"
 	@echo "... Printing.s"
+	@echo "... Resources/Chair.o"
+	@echo "... Resources/Chair.i"
+	@echo "... Resources/Chair.s"
 	@echo "... Resources/Console.o"
 	@echo "... Resources/Console.i"
 	@echo "... Resources/Console.s"

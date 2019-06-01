@@ -17,8 +17,9 @@ void Child::startHouse() {
     houseSetup.waitForStart();
 
     do {
-        watchingTV();
         showering();
+        eating();
+        watchingTV();
     }while(!houseSetup.finishedHouse);
 
 
@@ -40,6 +41,9 @@ std::string Child::getPersonStatus(){
             break;
         case IDLE:
             message += " is waiting";
+            break;
+        case EATING:
+            message += " is eating";
             break;
     }
 
@@ -69,4 +73,18 @@ void Child::showering() {
     Person::randomSleep(1,4);
     houseStuff.shower.releaseShower();
     setChildStatus(IDLE);
+}
+
+void Child::eating() {
+
+    for (auto & i : houseStuff.chairList) {
+        if(!i.isChairAvailable()){
+            i.takeChair(getId());
+            std::scoped_lock scopedLock(i.getMutexChair());
+            setChildStatus(EATING);
+            Person::randomSleep(1,4);
+            i.releaseChair();
+            setChildStatus(IDLE);
+        }
+    }
 }

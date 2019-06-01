@@ -108,6 +108,12 @@
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h">
 			<Option target="HouseMultithreading"/>
 		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Chair.cpp">
+			<Option target="HouseMultithreading"/>
+		</Unit>
+		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Chair.h">
+			<Option target="HouseMultithreading"/>
+		</Unit>
 		<Unit filename="/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Console.cpp">
 			<Option target="HouseMultithreading"/>
 		</Unit>

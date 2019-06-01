@@ -3,6 +3,7 @@
 //
 
 #include "TV.h"
+#include <algorithm>
 
 TV::TV(int id)
     :   id(id),
@@ -12,14 +13,15 @@ TV::TV(int id)
 void TV::useTV(int personId) {
 
     std::scoped_lock<std::mutex> scopedLock(mutexTV);
-    while(!isTVReady) {
-        waitForTV();
-    }
-    if(placeCounter!=personsCounter){
-        this->persons.push_back(personId);
-        ++placeCounter;
-        if(placeCounter == personsCounter){
-            isTVReady = false;
+    while(std::find(persons.begin(),persons.end(),personId)==persons.end()) {
+        if(placeCounter!=personsCounter){
+            this->persons.push_back(personId);
+            ++placeCounter;
+            if(placeCounter == personsCounter){
+                isTVReady = false;
+            }
+        }else{
+            waitForTV();
         }
     }
 }

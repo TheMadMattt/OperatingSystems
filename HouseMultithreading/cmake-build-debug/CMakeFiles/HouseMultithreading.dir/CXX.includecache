@@ -6,28 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.cpp
-House.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.h
-Threads/Child.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.h
-Threads/Adult.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.h
-
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.h
-deque
--
-Threads/Person.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
-Resources/TV.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
-Resources/Shower.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
-HouseStuff.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
-thread
--
-
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
 mutex
 -
@@ -36,15 +14,13 @@ condition_variable
 atomic
 -
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.cpp
-HouseStuff.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
-
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseStuff.h
 Resources/Shower.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
 Resources/TV.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
+Resources/Chair.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Chair.h
 
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
 HouseSetup.h
@@ -56,13 +32,15 @@ menu.h
 vector
 -
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Chair.h
+mutex
+-
 condition_variable
 -
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.cpp
-TV.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/Shower.h
+condition_variable
+-
 
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Resources/TV.h
 ../HouseSetup.h
@@ -109,16 +87,4 @@ Person.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/HouseSetup.h
 ../Printing.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Printing.h
-
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/main.cpp
-iostream
--
-Threads/Person.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
-Threads/Child.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.h
-Threads/Adult.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.h
-House.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/House.h
 

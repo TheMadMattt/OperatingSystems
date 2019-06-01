@@ -17,7 +17,7 @@ public:
     ~Child();
 
     enum ChildStatus{
-        IDLE, WATCHING, SHOWERING, PLAYING
+        IDLE, WATCHING, SHOWERING, PLAYING, EATING
     };
 
     void startHouse() override;
@@ -29,6 +29,8 @@ public:
     void watchingTV() override;
 
     void showering() override;
+
+    void eating() override;
 
 private:
     ChildStatus childStatus;

@@ -19,7 +19,7 @@ public:
     ~Adult();
 
     enum AdultStatus{
-        IDLE, WATCHING, SHOWERING
+        IDLE, WATCHING, SHOWERING, EATING
     };
 
     void startHouse() override;
@@ -29,8 +29,10 @@ public:
     void setAdultStatus(AdultStatus _adultStatus);
 
     void watchingTV() override;
-
     void showering() override;
+
+    void eating() override;
+
 
 private:
     AdultStatus adultStatus;

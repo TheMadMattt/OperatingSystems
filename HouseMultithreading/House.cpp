@@ -9,7 +9,7 @@
 House::House(int adultsNumber, int childrenNumber)
     :   adultsNumber(adultsNumber),
         childrenNumber(childrenNumber),
-        houseStuff(),
+        houseStuff(adultsNumber+childrenNumber),
         print(std::ref(houseSetup))
 {
     createPersons();
