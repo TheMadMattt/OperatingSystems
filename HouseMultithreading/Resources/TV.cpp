@@ -26,9 +26,9 @@ void TV::releaseTV(int personId) {
     for (int i = 0; i < this->persons.size(); ++i) {
         if(this->persons[i] == personId){
             this->persons.erase(this->persons.begin()+i);
+            --placeCounter;
         }
     }
-    --placeCounter;
 
     notifyThreads();
 }

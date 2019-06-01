@@ -9,7 +9,7 @@
 #include "../Threads/Person.h"
 #include <deque>
 
-#define personsCounter 3
+#define personsCounter 2
 
 class TV {
 public:
@@ -18,7 +18,6 @@ public:
     void useTV(int personId);
     void releaseTV(int personId);
     void waitForTV();
-    void notifyThreads();
 
 private:
     int id = 0;
@@ -31,6 +30,8 @@ private:
     std::mutex waitMutex;
 
     int placeCounter = 0;
+
+    void notifyThreads();
 
 };
 
