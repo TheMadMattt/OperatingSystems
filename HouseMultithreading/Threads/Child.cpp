@@ -42,9 +42,6 @@ std::string Child::getPersonStatus(){
         case IDLE:
             message += " is waiting";
             break;
-        case STOPPED_WATCHING:
-            message += " stopped watching TV";
-            break;
     }
 
     return message;
@@ -61,10 +58,10 @@ void Child::watchingTV() {
 
     tv.waitForTV();
     tv.useTV(getId());
-    setChildStatus(ChildStatus::WATCHING);
+    setChildStatus(WATCHING);
     Person::randomSleep(1,4);
     tv.releaseTV(getId());
-    setChildStatus(ChildStatus ::STOPPED_WATCHING);
+    setChildStatus(IDLE);
 }
 
 void Child::showering() {

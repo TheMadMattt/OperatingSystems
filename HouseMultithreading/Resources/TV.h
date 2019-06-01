@@ -9,7 +9,7 @@
 #include "../Threads/Person.h"
 #include <deque>
 
-#define personsCounter 2
+#define personsCounter 3
 
 class TV {
 public:

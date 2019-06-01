@@ -18,7 +18,7 @@ public:
     ~Adult();
 
     enum AdultStatus{
-        IDLE, WATCHING, STOPPED_WATCHING, SHOWERING
+        IDLE, WATCHING, SHOWERING
     };
 
     void startHouse() override;
