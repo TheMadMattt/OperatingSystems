@@ -96,8 +96,8 @@ void TV::setStatus(TVStatus tvStatus) {
 
 void TV::playOnConsole(int personId) {
 
-    std::scoped_lock<std::mutex> scopedLock(mutexTV);
     while(!isPlayingConsole) {
+        std::scoped_lock<std::mutex> scopedLock(mutexTV);
         if(canPlay && placeCounter == 0 && console.getPlaceCounter() < console.getMaxPlayers()) {
             isPlayingConsole = true;
             console.useConsole(personId);

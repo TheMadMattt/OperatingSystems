@@ -46,7 +46,9 @@ void House::stop() {
 
     houseSetup.finishedHouse = true;
     for (auto & person : personsThread) {
-        person.join();
+        if(person.joinable()) {
+            person.join();
+        }
     }
 
 }
