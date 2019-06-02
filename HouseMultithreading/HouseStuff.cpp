@@ -4,7 +4,10 @@
 
 #include "HouseStuff.h"
 
-HouseStuff::HouseStuff(int peopleInHouse) {
+HouseStuff::HouseStuff(int peopleInHouse, Printing &printing)
+    :   tv(0,printing),
+        shower(0,printing)
+{
 
     if(peopleInHouse <= 2){
         this->peopleInHouse = peopleInHouse;
@@ -12,7 +15,7 @@ HouseStuff::HouseStuff(int peopleInHouse) {
         this->peopleInHouse = peopleInHouse-2;
     }
     for (int i = 0; i < this->peopleInHouse; ++i) {
-        chairList.emplace_back(i);
+        chairList.emplace_back(i, std::ref(printing));
     }
 
 }

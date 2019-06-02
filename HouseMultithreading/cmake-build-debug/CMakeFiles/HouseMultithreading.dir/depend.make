@@ -29,12 +29,16 @@ CMakeFiles/HouseMultithreading.dir/Printing.cpp.o: ../HouseSetup.h
 CMakeFiles/HouseMultithreading.dir/Printing.cpp.o: ../Printing.cpp
 CMakeFiles/HouseMultithreading.dir/Printing.cpp.o: ../Printing.h
 
+CMakeFiles/HouseMultithreading.dir/Resources/Chair.cpp.o: ../HouseSetup.h
+CMakeFiles/HouseMultithreading.dir/Resources/Chair.cpp.o: ../Printing.h
 CMakeFiles/HouseMultithreading.dir/Resources/Chair.cpp.o: ../Resources/Chair.cpp
 CMakeFiles/HouseMultithreading.dir/Resources/Chair.cpp.o: ../Resources/Chair.h
 
 CMakeFiles/HouseMultithreading.dir/Resources/Console.cpp.o: ../Resources/Console.cpp
 CMakeFiles/HouseMultithreading.dir/Resources/Console.cpp.o: ../Resources/Console.h
 
+CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: ../HouseSetup.h
+CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: ../Printing.h
 CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: ../Resources/Shower.cpp
 CMakeFiles/HouseMultithreading.dir/Resources/Shower.cpp.o: ../Resources/Shower.h
 

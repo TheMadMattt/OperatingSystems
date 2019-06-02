@@ -19,7 +19,7 @@ public:
     ~Adult();
 
     enum AdultStatus{
-        IDLE, WATCHING, SHOWERING, EATING
+        IDLE, WATCHING, SHOWERING, EATING, FINISHED
     };
 
     void startHouse() override;

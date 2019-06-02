@@ -7,6 +7,7 @@
 
 #include <mutex>
 #include <condition_variable>
+#include "../Printing.h"
 
 enum ChairStatus{
     CHAIR_AVAILABLE, CHAIR_IN_USE
@@ -15,16 +16,20 @@ enum ChairStatus{
 class Chair {
 
 public:
-    Chair(int id);
+    Chair(int id, Printing &printing);
 
     void takeChair(int personId);
     void releaseChair();
 
     std::mutex& getMutexChair();
 
-    void setStatus(ChairStatus status);
+    std::string getStatus();
+
+    void setStatus(ChairStatus chairStatus);
 
     bool& isChairAvailable();
+
+    int getId() const;
 
 private:
     int id;
@@ -33,6 +38,8 @@ private:
 
     std::condition_variable chairVariable;
     bool isChairTaken;
+
+    Printing &printing;
 
     std::mutex mutexChair;
     std::mutex waitMutex;

@@ -21,6 +21,8 @@ public:
 
     std::vector<std::string> getPersonsStatus();
 
+    std::vector<std::pair<std::string,std::string>> getResourcesStatus();
+
     HouseSetup houseSetup;
     Printing print;
     HouseStuff houseStuff;

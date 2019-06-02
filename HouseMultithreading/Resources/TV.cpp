@@ -5,9 +5,11 @@
 #include "TV.h"
 #include <algorithm>
 
-TV::TV(int id)
+TV::TV(int id, Printing &printing)
     :   id(id),
-        isTVReady(true)
+        printing(printing),
+        isTVReady(true),
+        status(TURNED_OFF)
 {}
 
 void TV::useTV(int personId) {
@@ -17,6 +19,7 @@ void TV::useTV(int personId) {
         if(placeCounter!=personsCounter){
             this->persons.push_back(personId);
             ++placeCounter;
+            setStatus(TURNED_ON);
             if(placeCounter == personsCounter){
                 isTVReady = false;
             }
@@ -34,6 +37,11 @@ void TV::releaseTV(int personId) {
             --placeCounter;
             notifyThreads();
         }
+    }
+    if(placeCounter == 0){
+        setStatus(TURNED_OFF);
+    }else{
+        setStatus(TURNED_ON);
     }
 }
 
@@ -56,4 +64,27 @@ void TV::notifyThreads() {
 
     tvVariable.notify_one();
 
+}
+
+std::string TV::getStatus() {
+
+    std::string message = "TV ";
+
+    switch (status){
+        case TURNED_OFF:
+            message += "is TURNED OFF";
+            break;
+        case TURNED_ON:
+            message += "is TURNED ON";
+            break;
+    }
+
+    return message;
+
+}
+
+void TV::setStatus(TVStatus tvStatus) {
+    this->status = tvStatus;
+
+    printing.updateResourcesStates("TV", getStatus());
 }

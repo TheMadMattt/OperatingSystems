@@ -11,12 +11,19 @@
 
 #define personsCounter 2
 
+enum TVStatus{
+    TURNED_OFF, TURNED_ON
+};
+
 class TV {
 public:
-    TV(int id);
+    TV(int id, Printing &printing);
 
     void useTV(int personId);
     void releaseTV(int personId);
+
+    std::string getStatus();
+    void setStatus(TVStatus tvStatus);
 
 private:
     int id = 0;
@@ -25,6 +32,8 @@ private:
     std::condition_variable tvVariable;
     bool isTVReady;
 
+    TVStatus status;
+
     std::mutex mutexTV;
     std::mutex waitMutex;
 
@@ -32,6 +41,8 @@ private:
 
     void notifyThreads();
     void waitForTV();
+
+    Printing &printing;
 };
 
 

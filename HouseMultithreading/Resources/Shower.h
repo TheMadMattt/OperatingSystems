@@ -7,6 +7,7 @@
 
 
 #include <condition_variable>
+#include "../Printing.h"
 
 enum ShowerStatus{
     AVAILABLE, IN_USE
@@ -14,10 +15,14 @@ enum ShowerStatus{
 
 class Shower {
 public:
-    Shower(int id);
+    Shower(int id, Printing &printing);
 
     void takeShower(int personId);
     void releaseShower();
+
+    std::string getShowerStatus();
+
+    void setShowerStatus(ShowerStatus status);
 
 private:
     int id = 0;
@@ -33,6 +38,8 @@ private:
 
     void waitForShower();
     void notifyThreads();
+
+    Printing &printing;
 };
 
 

@@ -9,11 +9,11 @@
 House::House(int adultsNumber, int childrenNumber)
     :   adultsNumber(adultsNumber),
         childrenNumber(childrenNumber),
-        houseStuff(adultsNumber+childrenNumber),
+        houseStuff(adultsNumber + childrenNumber, std::ref(print)),
         print(std::ref(houseSetup))
 {
     createPersons();
-    print.createMenu(getPersonsStatus());
+    print.createMenu(getPersonsStatus(), getResourcesStatus());
 }
 
 void House::createPersons() {
@@ -57,6 +57,19 @@ std::vector<std::string> House::getPersonsStatus() {
     for(auto &person : persons)
         status.emplace_back(person->getPersonStatus());
     status.emplace_back("\0");
+    return status;
+
+}
+
+std::vector<std::pair<std::string,std::string>> House::getResourcesStatus() {
+
+    auto status = std::vector<std::pair<std::string,std::string>>();
+    status.emplace_back("TV", houseStuff.tv.getStatus());
+    status.emplace_back("SHOWER",houseStuff.shower.getShowerStatus());
+    for (auto & chair : houseStuff.chairList) {
+        status.emplace_back("CHAIR"+ std::to_string(chair.getId()),chair.getStatus());
+    }
+    status.emplace_back("", "\0");
     return status;
 
 }

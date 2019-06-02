@@ -13,9 +13,9 @@
 class HouseStuff {
 
 public:
-    HouseStuff(int peopleInHouse);
-    TV tv = TV(0);
-    Shower shower = Shower(0);
+    HouseStuff(int peopleInHouse, Printing &printing);
+    TV tv;
+    Shower shower;
     std::deque<Chair> chairList;
 private:
     int peopleInHouse;

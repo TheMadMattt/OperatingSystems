@@ -22,7 +22,7 @@ void Child::startHouse() {
         watchingTV();
     }while(!houseSetup.finishedHouse);
 
-
+    setChildStatus(FINISHED);
 }
 
 std::string Child::getPersonStatus(){
@@ -44,6 +44,9 @@ std::string Child::getPersonStatus(){
             break;
         case EATING:
             message += " is eating";
+            break;
+        case FINISHED:
+            message += " has finished work";
             break;
     }
 

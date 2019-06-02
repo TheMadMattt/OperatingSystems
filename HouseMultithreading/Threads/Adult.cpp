@@ -19,6 +19,8 @@ void Adult::startHouse() {
         eating();
         watchingTV();
     }while(!houseSetup.finishedHouse);
+
+    setAdultStatus(FINISHED);
 }
 
 Adult::~Adult() {
@@ -40,6 +42,9 @@ std::string Adult::getPersonStatus(){
             break;
         case EATING:
             message += " is eating";
+            break;
+        case FINISHED:
+            message += " has finished work";
             break;
     }
 
@@ -74,7 +79,6 @@ void Adult::eating() {
 
     for (auto & i : houseStuff.chairList) {
         if(!i.isChairAvailable()){
-
             i.takeChair(getId());
             std::scoped_lock scopedLock(i.getMutexChair());
             setAdultStatus(EATING);

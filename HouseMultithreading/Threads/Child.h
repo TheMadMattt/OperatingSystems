@@ -17,7 +17,7 @@ public:
     ~Child();
 
     enum ChildStatus{
-        IDLE, WATCHING, SHOWERING, PLAYING, EATING
+        IDLE, WATCHING, SHOWERING, PLAYING, EATING, FINISHED
     };
 
     void startHouse() override;
