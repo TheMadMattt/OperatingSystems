@@ -18,6 +18,7 @@ void Child::startHouse() {
 
     do {
         eating();
+        playingConsole();
         showering();
         watchingTV();
     }while(!houseSetup.finishedHouse);
@@ -91,4 +92,14 @@ void Child::eating() {
             return;
         }
     }
+}
+
+void Child::playingConsole() {
+
+    houseStuff.tv.playOnConsole(getId());
+    setChildStatus(PLAYING);
+    Person::randomSleep(1,4);
+    houseStuff.tv.releaseConsole(getId());
+    setChildStatus(IDLE);
+
 }

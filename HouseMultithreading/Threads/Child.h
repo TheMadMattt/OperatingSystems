@@ -35,6 +35,8 @@ public:
 private:
     ChildStatus childStatus;
     HouseStuff &houseStuff;
+
+    void playingConsole();
 };
 
 

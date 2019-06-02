@@ -5,10 +5,13 @@
 #include "TV.h"
 #include <algorithm>
 
-TV::TV(int id, Printing &printing)
+TV::TV(int id, Printing &printing, Console &console)
     :   id(id),
         printing(printing),
+        console(console),
         isTVReady(true),
+        canPlay(true),
+        isPlayingConsole(false),
         status(TURNED_OFF)
 {}
 
@@ -16,7 +19,8 @@ void TV::useTV(int personId) {
 
     std::scoped_lock<std::mutex> scopedLock(mutexTV);
     while(std::find(persons.begin(),persons.end(),personId)==persons.end()) {
-        if(placeCounter!=personsCounter){
+        if(placeCounter != personsCounter && !isPlayingConsole
+        && console.getCosnoleStatus() == ConsoleStatus::CONSOLE_TURNED_OFF){
             this->persons.push_back(personId);
             ++placeCounter;
             setStatus(TURNED_ON);
@@ -39,6 +43,7 @@ void TV::releaseTV(int personId) {
         }
     }
     if(placeCounter == 0){
+        notifyCanPlay();
         setStatus(TURNED_OFF);
     }else{
         setStatus(TURNED_ON);
@@ -52,7 +57,7 @@ void TV::waitForTV() {
     isTVReady = false;
 
     tvVariable.wait(uniqueLock, [this] {
-        return this->isTVReady;
+        return this->isTVReady && !this->isPlayingConsole;
     });
 }
 
@@ -87,4 +92,48 @@ void TV::setStatus(TVStatus tvStatus) {
     this->status = tvStatus;
 
     printing.updateResourcesStates("TV", getStatus());
+}
+
+void TV::playOnConsole(int personId) {
+
+    std::scoped_lock<std::mutex> scopedLock(mutexTV);
+    while(!isPlayingConsole) {
+        if(canPlay && placeCounter == 0 && console.getPlaceCounter() < console.getMaxPlayers()) {
+            isPlayingConsole = true;
+            console.useConsole(personId);
+        }else{
+            waitForPlayingConsole();
+        }
+    }
+}
+
+void TV::releaseConsole(int personId) {
+
+    console.releaseConsole(personId);
+    if(console.getPlaceCounter() == 0) {
+        isPlayingConsole = false;
+        notifyThreads();
+    }
+}
+
+void TV::waitForPlayingConsole() {
+
+    std::unique_lock<std::mutex> uniqueLock(consoleMutex);
+
+    canPlay = false;
+
+    consoleVariable.wait(uniqueLock, [this] {
+        return this->canPlay;
+    });
+
+}
+
+void TV::notifyCanPlay() {
+
+    std::unique_lock<std::mutex> uniqueLock(consoleMutex);
+
+    canPlay = true;
+
+    consoleVariable.notify_one();
+
 }

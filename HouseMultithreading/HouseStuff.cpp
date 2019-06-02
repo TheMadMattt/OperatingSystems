@@ -5,7 +5,8 @@
 #include "HouseStuff.h"
 
 HouseStuff::HouseStuff(int peopleInHouse, Printing &printing)
-    :   tv(0,printing),
+    :   console(0, printing),
+        tv(0,printing, std::ref(console)),
         shower(0,printing)
 {
 

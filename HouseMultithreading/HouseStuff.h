@@ -16,6 +16,7 @@ public:
     HouseStuff(int peopleInHouse, Printing &printing);
     TV tv;
     Shower shower;
+    Console console;
     std::deque<Chair> chairList;
 private:
     int peopleInHouse;

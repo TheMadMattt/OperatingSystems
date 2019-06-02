@@ -66,6 +66,7 @@ std::vector<std::pair<std::string,std::string>> House::getResourcesStatus() {
     auto status = std::vector<std::pair<std::string,std::string>>();
     status.emplace_back("TV", houseStuff.tv.getStatus());
     status.emplace_back("SHOWER",houseStuff.shower.getShowerStatus());
+    status.emplace_back("CONSOLE", houseStuff.console.getStatus());
     for (auto & chair : houseStuff.chairList) {
         status.emplace_back("CHAIR"+ std::to_string(chair.getId()),chair.getStatus());
     }
