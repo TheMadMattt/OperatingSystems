@@ -17,8 +17,8 @@ void Child::startHouse() {
     houseSetup.waitForStart();
 
     do {
-        showering();
         eating();
+        showering();
         watchingTV();
     }while(!houseSetup.finishedHouse);
 
@@ -88,6 +88,7 @@ void Child::eating() {
             Person::randomSleep(1,4);
             i.releaseChair();
             setChildStatus(IDLE);
+            return;
         }
     }
 }

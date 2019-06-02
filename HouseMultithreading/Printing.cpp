@@ -61,7 +61,7 @@ void Printing::createMenu(std::vector<std::string> personsStatus, std::vector<st
     post_menu(myMenu);
 
     for (int i = 0; i < this->resourcesStatus.size(); ++i) {
-        mvprintw(LINES - 15 + i, 0, this->resourcesStatus[i].second.c_str());
+        mvprintw(LINES - (5+resourcesStatus.size()) + i, 0, this->resourcesStatus[i].second.c_str());
     }
 
     mvprintw(LINES - 2, 0, "ESC to stop threads");
@@ -105,7 +105,7 @@ void Printing::updateMenu(int personId, std::string status) {
     post_menu(myMenu);
 
     for (int i = 0; i < resourcesStatus.size(); ++i) {
-        mvprintw(LINES - 15 + i, 0, resourcesStatus[i].second.c_str());
+        mvprintw(LINES - (5 +resourcesStatus.size()) + i, 0, resourcesStatus[i].second.c_str());
     }
 
     mvprintw(LINES - 2, 0, "ESC to stop threads");
@@ -122,14 +122,8 @@ void Printing::updateResourcesStates(const std::string& resourceName, const std:
 
     std::lock_guard<std::mutex> lockGuard(menuMutex);
 
-    auto currentMenuItem = myMenu->curitem;
-    unpost_menu(myMenu);
-    set_menu_items(myMenu,myMenuItems);
-    set_current_item(myMenu,currentMenuItem);
-    post_menu(myMenu);
-
     for (int i = 0; i < resourcesStatus.size(); ++i) {
-        mvprintw(LINES - 15 + i, 0, resourcesStatus[i].second.c_str());
+        mvprintw(LINES - (5+resourcesStatus.size()) + i, 0, resourcesStatus[i].second.c_str());
     }
 
     mvprintw(LINES - 2, 0, "ESC to stop threads");

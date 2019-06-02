@@ -12,7 +12,7 @@ HouseStuff::HouseStuff(int peopleInHouse, Printing &printing)
     if(peopleInHouse <= 2){
         this->peopleInHouse = peopleInHouse;
     }else{
-        this->peopleInHouse = peopleInHouse-2;
+        this->peopleInHouse = peopleInHouse/2;
     }
     for (int i = 0; i < this->peopleInHouse; ++i) {
         chairList.emplace_back(i, std::ref(printing));

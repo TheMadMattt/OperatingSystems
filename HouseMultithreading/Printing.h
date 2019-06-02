@@ -39,6 +39,8 @@ private:
     void stop();
 
     void closeMenu();
+
+    int adultsNumber;
 };
 
 
