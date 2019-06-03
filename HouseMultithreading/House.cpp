@@ -57,7 +57,7 @@ std::vector<std::pair<std::string,std::string>> House::getPersonsStatus() {
 
     auto status = std::vector<std::pair<std::string,std::string>>();
     for(auto &person : persons)
-        status.emplace_back(person->getHouseCycle(), person->getPersonStatus());
+        status.emplace_back(person->getProgress(), person->getPersonStatus());
     status.emplace_back("","\0");
     return status;
 

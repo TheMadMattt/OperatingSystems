@@ -8,6 +8,8 @@
 
 #include "../HouseSetup.h"
 #include "../Printing.h"
+#include <iomanip> // setprecision
+#include <sstream> // stringstream
 
 class Person {
 public:
@@ -18,13 +20,15 @@ public:
     virtual void startHouse() {}
 
     virtual std::string getPersonStatus(){};
-    std::string getHouseCycle(){return "Cykl " + std::to_string(cycle);};
 
     void randomSleep(int min, int max);
+    int randInt(int min, int max);
 
     virtual void watchingTV() {};
     virtual void showering() {};
     virtual void eating() {};
+
+    std::string getProgress();
 
     Printing &print;
     HouseSetup &houseSetup;
@@ -32,7 +36,7 @@ public:
 protected:
     int id;
     int age;
-    int cycle;
+    float progress;
 };
 
 

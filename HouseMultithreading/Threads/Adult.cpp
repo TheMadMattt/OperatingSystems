@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <thread>
 #include "Adult.h"
 
 Adult::Adult(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff)
@@ -18,7 +19,6 @@ void Adult::startHouse() {
         eating();
         showering();
         watchingTV();
-        ++cycle;
     }while(!houseSetup.finishedHouse);
 
     setAdultStatus(FINISHED);
@@ -53,36 +53,54 @@ std::string Adult::getPersonStatus(){
 void Adult::setAdultStatus(AdultStatus _adultStatus) {
     this->adultStatus = _adultStatus;
 
-    print.updateMenu(id, getPersonStatus(), getHouseCycle());
+    print.updateMenu(id, getPersonStatus(), getProgress());
 }
 
 void Adult::watchingTV() {
 
+    int randWatch = Person::randInt(20,30);
+    progress = 0.0;
+
     houseStuff.tv.useTV(id);
-    setAdultStatus(WATCHING);
-    Person::randomSleep(1,4);
+    for (int i = 1; i <= randWatch; ++i) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        progress = (100.0*i)/randWatch;
+        setAdultStatus(WATCHING);
+    }
     houseStuff.tv.releaseTV(id);
     setAdultStatus(IDLE);
 }
 
 void Adult::showering() {
 
+    int randShower = Person::randInt(20,30);
+    progress = 0.0;
+
     houseStuff.shower.takeShower(id);
-    setAdultStatus(SHOWERING);
-    Person::randomSleep(1,4);
+    for (int i = 1; i <= randShower; ++i) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        progress = (100.0*i)/randShower;
+        setAdultStatus(SHOWERING);
+    }
     houseStuff.shower.releaseShower();
     setAdultStatus(IDLE);
 }
 
 void Adult::eating() {
 
-    for (auto & i : houseStuff.chairList) {
-        if(!i.isChairAvailable()){
-            i.takeChair(id);
-            std::scoped_lock scopedLock(i.getMutexChair());
-            setAdultStatus(EATING);
-            Person::randomSleep(1,4);
-            i.releaseChair();
+    int randEat = Person::randInt(20,30);
+    progress = 0.0;
+
+    for (auto & chair : houseStuff.chairList) {
+        if(!chair.isChairAvailable()){
+            chair.takeChair(id);
+            std::scoped_lock scopedLock(chair.getMutexChair());
+            for (int i = 1; i <= randEat; ++i) {
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                progress = (100.0*i)/randEat;
+                setAdultStatus(EATING);
+            }
+            chair.releaseChair();
             setAdultStatus(IDLE);
             return;
         }

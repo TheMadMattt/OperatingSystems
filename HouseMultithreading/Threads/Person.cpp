@@ -4,6 +4,7 @@
 
 #include <random>
 #include <thread>
+#include <sstream>
 #include "Person.h"
 
 Person::Person(int id, unsigned int age, Printing &print, HouseSetup &houseSetup)
@@ -11,7 +12,7 @@ Person::Person(int id, unsigned int age, Printing &print, HouseSetup &houseSetup
         age(age),
         print(print),
         houseSetup(houseSetup),
-        cycle(0)
+        progress(0.0)
 {}
 
 
@@ -20,7 +21,7 @@ Person::Person(Person &&other) noexcept
         age(other.age),
         print(other.print),
         houseSetup(other.houseSetup),
-        cycle(other.cycle)
+        progress(other.progress)
 {}
 
 Person::~Person() = default;
@@ -34,4 +35,25 @@ void Person::randomSleep(int min, int max) {
 
     std::this_thread::sleep_for(std::chrono::seconds(randSleepTime));
 
+}
+
+int Person::randInt(int min, int max) {
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_int_distribution<int> generator(min, max);
+
+    int randInt = generator(mt);
+
+    return randInt;
+}
+
+std::string Person::getProgress(){
+
+    std::stringstream stream;
+    stream << std::fixed << std::setprecision(0) << progress;
+    std::string s = stream.str();
+
+    std::string workProgress = "Progres: " + s + "  %";
+
+    return workProgress;
 }

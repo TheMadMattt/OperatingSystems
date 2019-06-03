@@ -20,7 +20,7 @@ public:
     void menu();
     void createMenu(std::vector<std::pair<std::string, std::string>> personsStatus,
                     std::vector<std::pair<std::string, std::string>> resourcesStatusBegin);
-    void updateMenu(int personId, std::string status, std::string cycle);
+    void updateMenu(int personId, std::string status, std::string progress);
     void updateResourcesStates(const std::string& resourceName, const std::string& status);
 
 private:

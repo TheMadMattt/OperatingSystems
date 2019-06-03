@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <thread>
 #include "Child.h"
 
 Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff, int adultsNumber)
@@ -23,7 +24,6 @@ void Child::startHouse() {
         playingConsole();
         showering();
         watchingTV();
-        ++cycle;
     }while(!houseSetup.finishedHouse);
 
     setChildStatus(FINISHED);
@@ -60,37 +60,55 @@ std::string Child::getPersonStatus(){
 void Child::setChildStatus(ChildStatus _childStatus) {
     this->childStatus = _childStatus;
 
-    print.updateMenu(id, getPersonStatus(), getHouseCycle());
+    print.updateMenu(id, getPersonStatus(), getProgress());
 
 }
 
 void Child::watchingTV() {
 
+    int randWatch = Person::randInt(20,30);
+    progress = 0.0;
+
     houseStuff.tv.useTV(id);
-    setChildStatus(WATCHING);
-    Person::randomSleep(1,4);
+    for (int i = 1; i <= randWatch; ++i) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        progress = (100.0*i)/randWatch;
+        setChildStatus(WATCHING);
+    }
     houseStuff.tv.releaseTV(id);
     setChildStatus(IDLE);
 }
 
 void Child::showering() {
 
+    int randShower = Person::randInt(20,30);
+    progress = 0.0;
+
     houseStuff.shower.takeShower(id);
-    setChildStatus(SHOWERING);
-    Person::randomSleep(1,4);
+    for (int i = 1; i <= randShower; ++i) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        progress = (100.0*i)/randShower;
+        setChildStatus(SHOWERING);
+    }
     houseStuff.shower.releaseShower();
     setChildStatus(IDLE);
 }
 
 void Child::eating() {
 
-    for (auto & i : houseStuff.chairList) {
-        if(!i.isChairAvailable()){
-            i.takeChair(id);
-            std::scoped_lock scopedLock(i.getMutexChair());
-            setChildStatus(EATING);
-            Person::randomSleep(1,4);
-            i.releaseChair();
+    int randEat = Person::randInt(20,30);
+    progress = 0.0;
+
+    for (auto & chair : houseStuff.chairList) {
+        if(!chair.isChairAvailable()){
+            chair.takeChair(id);
+            std::scoped_lock scopedLock(chair.getMutexChair());
+            for (int i = 1; i <= randEat; ++i) {
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                progress = (100.0*i)/randEat;
+                setChildStatus(EATING);
+            }
+            chair.releaseChair();
             setChildStatus(IDLE);
             return;
         }
@@ -99,9 +117,15 @@ void Child::eating() {
 
 void Child::playingConsole() {
 
+    int randPlay = Person::randInt(20,30);
+    progress = 0.0;
+
     houseStuff.tv.playOnConsole(id);
-    setChildStatus(PLAYING);
-    Person::randomSleep(1,4);
+    for (int i = 1; i <= randPlay; ++i) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        progress = (100.0*i)/randPlay;
+        setChildStatus(PLAYING);
+    }
     houseStuff.tv.releaseConsole(id);
     setChildStatus(IDLE);
 

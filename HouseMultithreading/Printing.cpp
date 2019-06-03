@@ -93,10 +93,10 @@ void Printing::closeMenu() {
 
 }
 
-void Printing::updateMenu(int personId, std::string status, std::string cycle) {
+void Printing::updateMenu(int personId, std::string status, std::string progress) {
 
     std::lock_guard<std::mutex> lockGuard(menuMutex);
-    personStatus[personId].first = std::move(cycle);
+    personStatus[personId].first = std::move(progress);
     personStatus[personId].second = std::move(status);
     myMenuItems[personId] = new_item(this->personStatus[personId].first.c_str(), this->personStatus[personId].second.c_str());
 
