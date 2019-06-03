@@ -13,7 +13,7 @@
 
 class Child: public Person {
 public:
-    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff);
+    Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff, int adultsNumber);
     ~Child();
 
     enum ChildStatus{
@@ -35,6 +35,8 @@ public:
 private:
     ChildStatus childStatus;
     HouseStuff &houseStuff;
+
+    int adultsNumber;
 
     void playingConsole();
 };

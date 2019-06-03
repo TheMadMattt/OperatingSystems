@@ -10,7 +10,8 @@ Person::Person(int id, unsigned int age, Printing &print, HouseSetup &houseSetup
     :   id(id),
         age(age),
         print(print),
-        houseSetup(houseSetup)
+        houseSetup(houseSetup),
+        cycle(0)
 {}
 
 
@@ -18,7 +19,8 @@ Person::Person(Person &&other) noexcept
     :   id(other.id),
         age(other.age),
         print(other.print),
-        houseSetup(other.houseSetup)
+        houseSetup(other.houseSetup),
+        cycle(other.cycle)
 {}
 
 Person::~Person() = default;
@@ -32,8 +34,4 @@ void Person::randomSleep(int min, int max) {
 
     std::this_thread::sleep_for(std::chrono::seconds(randSleepTime));
 
-}
-
-int Person::getId() const {
-    return id;
 }

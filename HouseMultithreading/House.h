@@ -19,7 +19,7 @@ public:
 
     void start();
 
-    std::vector<std::string> getPersonsStatus();
+    std::vector<std::pair<std::string,std::string>> getPersonsStatus();
 
     std::vector<std::pair<std::string,std::string>> getResourcesStatus();
 

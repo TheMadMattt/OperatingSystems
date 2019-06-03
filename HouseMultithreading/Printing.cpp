@@ -43,7 +43,8 @@ void Printing::menu() {
     }
 }
 
-void Printing::createMenu(std::vector<std::string> personsStatus, std::vector<std::pair<std::string,std::string>> resourcesStatusBegin) {
+void Printing::createMenu(std::vector<std::pair<std::string, std::string>> personsStatus,
+                          std::vector<std::pair<std::string, std::string>> resourcesStatusBegin) {
 
     init();
     this-> personsNumber = personsStatus.size();
@@ -52,7 +53,7 @@ void Printing::createMenu(std::vector<std::string> personsStatus, std::vector<st
     myMenuItems = new ITEM*[personsNumber];
 
     for (int i = 0; i < personsNumber; ++i) {
-        myMenuItems[i] = new_item(this->personStatus[i].c_str(), nullptr);
+        myMenuItems[i] = new_item(this->personStatus[i].first.c_str(), this->personStatus[i].second.c_str());
     }
 
     myMenu = new_menu(myMenuItems);
@@ -92,11 +93,12 @@ void Printing::closeMenu() {
 
 }
 
-void Printing::updateMenu(int personId, std::string status) {
+void Printing::updateMenu(int personId, std::string status, std::string cycle) {
 
     std::lock_guard<std::mutex> lockGuard(menuMutex);
-    personStatus[personId] = std::move(status);
-    myMenuItems[personId] = new_item(this->personStatus[personId].c_str(), nullptr);
+    personStatus[personId].first = std::move(cycle);
+    personStatus[personId].second = std::move(status);
+    myMenuItems[personId] = new_item(this->personStatus[personId].first.c_str(), this->personStatus[personId].second.c_str());
 
     auto currentMenuItem = myMenu->curitem;
     unpost_menu(myMenu);

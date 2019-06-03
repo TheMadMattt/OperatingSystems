@@ -25,7 +25,7 @@ void House::createPersons() {
     }
 
     for (int j = 0; j < childrenNumber; ++j) {
-        auto *child = new Child(j+adultsNumber,16,std::ref(houseSetup),std::ref(print), std::ref(houseStuff));
+        auto *child = new Child(j+adultsNumber,16,std::ref(houseSetup),std::ref(print), std::ref(houseStuff), adultsNumber);
         persons.emplace_back(child);
         personsThread.emplace_back(std::thread(&Child::startHouse, child));
     }
@@ -53,12 +53,12 @@ void House::stop() {
 
 }
 
-std::vector<std::string> House::getPersonsStatus() {
+std::vector<std::pair<std::string,std::string>> House::getPersonsStatus() {
 
-    auto status = std::vector<std::string>();
+    auto status = std::vector<std::pair<std::string,std::string>>();
     for(auto &person : persons)
-        status.emplace_back(person->getPersonStatus());
-    status.emplace_back("\0");
+        status.emplace_back(person->getHouseCycle(), person->getPersonStatus());
+    status.emplace_back("","\0");
     return status;
 
 }

@@ -5,12 +5,14 @@
 #include <iostream>
 #include "Child.h"
 
-Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff)
+Child::Child(int id, unsigned int age, HouseSetup &houseSetup, Printing &print, HouseStuff &houseStuff, int adultsNumber)
     :   houseStuff(houseStuff),
         childStatus(IDLE),
-        Person(id, age, print, houseSetup) {}
+        adultsNumber(adultsNumber),
+        Person(id, age, print, houseSetup) {
+}
 
-Child::~Child() {}
+Child::~Child() = default;
 
 void Child::startHouse() {
 
@@ -21,6 +23,7 @@ void Child::startHouse() {
         playingConsole();
         showering();
         watchingTV();
+        ++cycle;
     }while(!houseSetup.finishedHouse);
 
     setChildStatus(FINISHED);
@@ -28,23 +31,23 @@ void Child::startHouse() {
 
 std::string Child::getPersonStatus(){
 
-    std::string message = "Child " + std::to_string(getId());
+    std::string message = " | Child " + std::to_string(id-adultsNumber);
 
     switch (childStatus){
         case WATCHING:
-            message += " is watching TV";
+            message += "    is watching TV";
             break;
         case SHOWERING:
-            message += " is showering";
+            message += "      is showering";
             break;
         case PLAYING:
-            message += " is playing game";
+            message += "   is playing game";
             break;
         case IDLE:
-            message += " is waiting";
+            message += "        is waiting";
             break;
         case EATING:
-            message += " is eating";
+            message += "         is eating";
             break;
         case FINISHED:
             message += " has finished work";
@@ -57,22 +60,22 @@ std::string Child::getPersonStatus(){
 void Child::setChildStatus(ChildStatus _childStatus) {
     this->childStatus = _childStatus;
 
-    print.updateMenu(getId(),getPersonStatus());
+    print.updateMenu(id, getPersonStatus(), getHouseCycle());
 
 }
 
 void Child::watchingTV() {
 
-    houseStuff.tv.useTV(getId());
+    houseStuff.tv.useTV(id);
     setChildStatus(WATCHING);
     Person::randomSleep(1,4);
-    houseStuff.tv.releaseTV(getId());
+    houseStuff.tv.releaseTV(id);
     setChildStatus(IDLE);
 }
 
 void Child::showering() {
 
-    houseStuff.shower.takeShower(getId());
+    houseStuff.shower.takeShower(id);
     setChildStatus(SHOWERING);
     Person::randomSleep(1,4);
     houseStuff.shower.releaseShower();
@@ -83,7 +86,7 @@ void Child::eating() {
 
     for (auto & i : houseStuff.chairList) {
         if(!i.isChairAvailable()){
-            i.takeChair(getId());
+            i.takeChair(id);
             std::scoped_lock scopedLock(i.getMutexChair());
             setChildStatus(EATING);
             Person::randomSleep(1,4);
@@ -96,10 +99,10 @@ void Child::eating() {
 
 void Child::playingConsole() {
 
-    houseStuff.tv.playOnConsole(getId());
+    houseStuff.tv.playOnConsole(id);
     setChildStatus(PLAYING);
     Person::randomSleep(1,4);
-    houseStuff.tv.releaseConsole(getId());
+    houseStuff.tv.releaseConsole(id);
     setChildStatus(IDLE);
 
 }

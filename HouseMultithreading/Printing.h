@@ -18,14 +18,15 @@ public:
     ~Printing();
 
     void menu();
-    void createMenu(std::vector<std::string> personsStatus, std::vector<std::pair<std::string,std::string>> resourcesStatusBegin);
-    void updateMenu(int personId, std::string status);
+    void createMenu(std::vector<std::pair<std::string, std::string>> personsStatus,
+                    std::vector<std::pair<std::string, std::string>> resourcesStatusBegin);
+    void updateMenu(int personId, std::string status, std::string cycle);
     void updateResourcesStates(const std::string& resourceName, const std::string& status);
 
 private:
 
     std::mutex menuMutex;
-    std::vector<std::string> personStatus;
+    std::vector<std::pair<std::string, std::string>> personStatus;
     std::vector<std::pair<std::string,std::string>> resourcesStatus;
     int personsNumber;
 
@@ -39,8 +40,6 @@ private:
     void stop();
 
     void closeMenu();
-
-    int adultsNumber;
 };
 
 

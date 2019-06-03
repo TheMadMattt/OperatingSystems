@@ -18,30 +18,29 @@ void Adult::startHouse() {
         eating();
         showering();
         watchingTV();
+        ++cycle;
     }while(!houseSetup.finishedHouse);
 
     setAdultStatus(FINISHED);
 }
 
-Adult::~Adult() {
-
-}
+Adult::~Adult() = default;
 
 std::string Adult::getPersonStatus(){
-    std::string message = "Adult " + std::to_string(getId());
+    std::string message = " | Adult " + std::to_string(id);
 
     switch (adultStatus){
         case AdultStatus::WATCHING:
-            message += " is watching TV";
+            message += "    is watching TV";
             break;
         case AdultStatus::SHOWERING:
-            message += " is showering";
+            message += "      is showering";
             break;
         case IDLE:
-            message += " is waiting";
+            message += "        is waiting";
             break;
         case EATING:
-            message += " is eating";
+            message += "         is eating";
             break;
         case FINISHED:
             message += " has finished work";
@@ -54,21 +53,21 @@ std::string Adult::getPersonStatus(){
 void Adult::setAdultStatus(AdultStatus _adultStatus) {
     this->adultStatus = _adultStatus;
 
-    print.updateMenu(getId(),getPersonStatus());
+    print.updateMenu(id, getPersonStatus(), getHouseCycle());
 }
 
 void Adult::watchingTV() {
 
-    houseStuff.tv.useTV(getId());
+    houseStuff.tv.useTV(id);
     setAdultStatus(WATCHING);
     Person::randomSleep(1,4);
-    houseStuff.tv.releaseTV(getId());
+    houseStuff.tv.releaseTV(id);
     setAdultStatus(IDLE);
 }
 
 void Adult::showering() {
 
-    houseStuff.shower.takeShower(getId());
+    houseStuff.shower.takeShower(id);
     setAdultStatus(SHOWERING);
     Person::randomSleep(1,4);
     houseStuff.shower.releaseShower();
@@ -79,7 +78,7 @@ void Adult::eating() {
 
     for (auto & i : houseStuff.chairList) {
         if(!i.isChairAvailable()){
-            i.takeChair(getId());
+            i.takeChair(id);
             std::scoped_lock scopedLock(i.getMutexChair());
             setAdultStatus(EATING);
             Person::randomSleep(1,4);

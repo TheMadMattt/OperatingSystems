@@ -18,10 +18,9 @@ public:
     virtual void startHouse() {}
 
     virtual std::string getPersonStatus(){};
+    std::string getHouseCycle(){return "Cykl " + std::to_string(cycle);};
 
     void randomSleep(int min, int max);
-
-    int getId() const;
 
     virtual void watchingTV() {};
     virtual void showering() {};
@@ -29,9 +28,11 @@ public:
 
     Printing &print;
     HouseSetup &houseSetup;
-private:
+
+protected:
     int id;
     int age;
+    int cycle;
 };
 
 
