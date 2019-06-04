@@ -26,18 +26,11 @@ Person::Person(Person &&other) noexcept
 
 Person::~Person() = default;
 
-void Person::randomSleep(int min, int max) {
-    std::random_device rd;
-    std::mt19937 mt(rd());
-    std::uniform_int_distribution<> generator(min, max);
+int Person::randInt() {
 
-    int randSleepTime = generator(mt);
+    int min = 30;
+    int max = 50;
 
-    std::this_thread::sleep_for(std::chrono::seconds(randSleepTime));
-
-}
-
-int Person::randInt(int min, int max) {
     std::random_device rd;
     std::mt19937 mt(rd());
     std::uniform_int_distribution<int> generator(min, max);

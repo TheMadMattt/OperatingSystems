@@ -21,8 +21,7 @@ public:
 
     virtual std::string getPersonStatus(){};
 
-    void randomSleep(int min, int max);
-    int randInt(int min, int max);
+    static int randInt();
 
     virtual void watchingTV() {};
     virtual void showering() {};

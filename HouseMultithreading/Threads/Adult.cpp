@@ -58,7 +58,7 @@ void Adult::setAdultStatus(AdultStatus _adultStatus) {
 
 void Adult::watchingTV() {
 
-    int randWatch = Person::randInt(20,30);
+    int randWatch = Person::randInt();
     progress = 0.0;
 
     houseStuff.tv.useTV(id);
@@ -73,7 +73,7 @@ void Adult::watchingTV() {
 
 void Adult::showering() {
 
-    int randShower = Person::randInt(20,30);
+    int randShower = Person::randInt();
     progress = 0.0;
 
     houseStuff.shower.takeShower(id);
@@ -88,7 +88,7 @@ void Adult::showering() {
 
 void Adult::eating() {
 
-    int randEat = Person::randInt(20,30);
+    int randEat = Person::randInt();
     progress = 0.0;
 
     for (auto & chair : houseStuff.chairList) {
