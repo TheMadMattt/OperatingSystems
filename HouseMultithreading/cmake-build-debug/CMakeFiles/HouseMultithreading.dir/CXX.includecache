@@ -64,15 +64,15 @@ Console.h
 deque
 -
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.cpp
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.cpp
 iostream
 -
 thread
 -
-Child.h
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.h
+Adult.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.h
 
-/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Child.h
+/home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Adult.h
 Person.h
 /home/mateusz/Dokumenty/Github/OperatingSystems/HouseMultithreading/Threads/Person.h
 ../Resources/TV.h

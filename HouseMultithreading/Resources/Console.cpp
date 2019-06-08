@@ -32,6 +32,7 @@ void Console::useConsole(int playerId) {
 
 void Console::releaseConsole(int playerId) {
 
+    std::scoped_lock<std::mutex> scopedLock(releaseConsoleMutex);
     for (int i = 0; i < this->players.size(); ++i) {
         if(this->players[i] == playerId){
             this->players.erase(this->players.begin()+i);

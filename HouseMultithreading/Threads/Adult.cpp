@@ -69,6 +69,7 @@ void Adult::watchingTV() {
     }
     houseStuff.tv.releaseTV(id);
     setAdultStatus(IDLE);
+
 }
 
 void Adult::showering() {

@@ -44,6 +44,7 @@ private:
     TVStatus status;
 
     std::mutex mutexTV;
+    std::mutex releaseMutexTV;
     std::mutex waitMutex;
     std::mutex consoleMutex;
 

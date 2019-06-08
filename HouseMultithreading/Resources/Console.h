@@ -42,6 +42,7 @@ private:
     ConsoleStatus status;
 
     std::mutex consoleMutex;
+    std::mutex releaseConsoleMutex;
     std::mutex waitMutex;
 
     std::condition_variable consoleVariable;
